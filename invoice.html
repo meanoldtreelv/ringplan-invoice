@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ringplan Invoice</title>
+        <meta name="description" content="Your Ringplan Invoice">
+        <!-- disable repsonsive <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+         <!-- Remote style sheet -->
+        <link href="./assets/css/bootstrap.css" rel="stylesheet" />
+        <style type="text/css">
+            body {
+                padding-top: 80px;
+                padding-bottom: 40px;
+                width:819px;
+                margin-left: 46px;
+            }
+
+            table.align-right-2 td:nth-child(2){
+                text-align: right;
+            }
+        
+            .navbar-inner {
+                height: 96px;
+                background-color: #d3d3d3;
+            
+            }
+
+            .navbar-inner-red {
+                background-color: #600000;
+                background-image: none;
+                background-repeat: no-repeat;
+                filter: none;
+            }
+    
+            .full-screen {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+    
+            .normal-screen {
+                position: absolute ;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header Bar-->
+        <div class="navbar navbar-fixed-top">
+            <div id="divNavbarInner" class="navbar-inner">
+                <div class="container" >
+                    <div class="row">
+                        <img alt="Ringplan" class="brand" src="./assets/img/ringplan-white-40x40.png" >
+                        <div class="span8" style="padding-top: 12px ;">
+                                <h1>
+                                    Ringplan Invoice
+                                </h1>
+                        </div>
+                        <div class="span2" style="padding-top: 12px ;">
+                                <h1>
+                                    **Date**
+                                </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Customer Details-->
+        <div class="container">
+            <div class="row">
+                <!--customer billing info-->
+                <div class="span3 well">
+                    <table>
+                        <tr><td>CUSTOMER CONTACT</td></tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr><td>«Account.Name»</td></tr>
+                        <tr><td>«Bill.Address1»</td></tr>
+                        <tr><td>«Bill.Address2»</td></tr>
+                        <tr><td>«Bill.City», «Bill.State» «Bill.PostalCode»</td></tr>
+                        <tr><td>&nbsp;</td></tr>
+                   </table> 
+                </div>
+                <!--account info-->
+                <div class="span4 well">
+                    <table>
+                        <tr><td>Account #:</td><td>&nbsp;&nbsp;&nbsp;«Account.AccountNumber»</td></tr>
+                        <tr><td>Invoice #:</td><td>&nbsp;&nbsp;&nbsp;«Invoice.InvoiceNumber»</td></tr>
+                        <tr><td>BTN:</td><td>&nbsp;&nbsp;&nbsp;«BillToContact.WorkPhone»</td></tr>
+                        <tr><td>Pincode:</td><td>&nbsp;&nbsp;&nbsp;«Account.PinCode__c»</td></tr>
+                        <tr><td>Email:</td><td>&nbsp;&nbsp;&nbsp;«BillToContact.WorkEmail»</td>
+                        <tr><td>INVOICE DATE:</td><td>&nbsp;&nbsp;&nbsp;«Invoice.InvoiceDate»</td></tr>
+                        <tr><td>Terms:</td><td>&nbsp;&nbsp;&nbsp;«Account.PaymentTerm»</td></tr>
+                        <tr><td>Invoice Amount:</td><td>&nbsp;&nbsp;&nbsp;«Account.NewBalance»</td></tr>
+                    </table>
+
+                </div> 
+                <!--marketing blurb-->
+                <div class="span3 well">
+                    <table>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr><td>MARKETING BLURB</td></tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr><td>&nbsp;</td></tr>
+                   </table>
+                </div>
+            </div>
+        </div>    
+        <!-- Summary Section-->
+        <div class="container">
+            <div class="row">
+                <div class="span11 well">
+        <!--Charges summary-->
+                    <h2>Summary of Charges</h2>
+                    <table width="100%">
+                        <tr>
+                            <th>Service Dates</th>
+                            <th>Description</th>
+                            <th>Quantity</th>
+                            <th>Unit</th>
+                            <th>Price</th>
+                            <th>Subtotal</th>
+                        </tr>
+                        <tr>
+                            <td>«InvoiceItem.ServicePeriod»</td>
+                            <td>«InvoiceItem.Name</td>
+                            <td>«InvoiceItem.Quantity»</td>
+                            <td>«InvoiceItem.UnitOfMeasure»</td>
+                            <td>«InvoiceItem.UnitPrice»</td>
+                            <td>«InvoiceItem.AmountWithoutTax»</td>
+                        </tr>
+                        <tr>
+                            <td>«InvoiceItem.ServicePeriod»</td>
+                            <td>«InvoiceItem.Name</td>
+                            <td>«InvoiceItem.Quantity»</td>
+                            <td>«InvoiceItem.UnitOfMeasure»</td>
+                            <td>«InvoiceItem.UnitPrice»</td>
+                            <td>«InvoiceItem.AmountWithoutTax»</td>
+                        </tr>
+                        <tr>
+                            <td>«InvoiceItem.ServicePeriod»</td>
+                            <td>«InvoiceItem.Name</td>
+                            <td>«InvoiceItem.Quantity»</td>
+                            <td>«InvoiceItem.UnitOfMeasure»</td>
+                            <td>«InvoiceItem.UnitPrice»</td>
+                            <td>«InvoiceItem.AmountWithoutTax»</td>
+                        </tr>
+                        <tr>
+                            <td>«InvoiceItem.ServicePeriod»</td>
+                            <td>«InvoiceItem.Name</td>
+                            <td>«InvoiceItem.Quantity»</td>
+                            <td>«InvoiceItem.UnitOfMeasure»</td>
+                            <td>«InvoiceItem.UnitPrice»</td>
+                            <td>«InvoiceItem.AmountWithoutTax»</td>
+                        </tr>
+                        <tr>
+                            <td>«InvoiceItem.ServicePeriod»</td>
+                            <td>«InvoiceItem.Name</td>
+                            <td>«InvoiceItem.Quantity»</td>
+                            <td>«InvoiceItem.UnitOfMeasure»</td>
+                            <td>«InvoiceItem.UnitPrice»</td>
+                            <td>«InvoiceItem.AmountWithoutTax»</td>
+                        </tr>
+                        <tr>
+                            <td>«InvoiceItem.ServicePeriod»</td>
+                            <td>«InvoiceItem.Name</td>
+                            <td>«InvoiceItem.Quantity»</td>
+                            <td>«InvoiceItem.UnitOfMeasure»</td>
+                            <td>«InvoiceItem.UnitPrice»</td>
+                            <td>«InvoiceItem.AmountWithoutTax»</td>
+                        </tr>
+                        <tr>
+                            <td>«InvoiceItem.ServicePeriod»</td>
+                            <td>«InvoiceItem.Name</td>
+                            <td>«InvoiceItem.Quantity»</td>
+                            <td>«InvoiceItem.UnitOfMeasure»</td>
+                            <td>«InvoiceItem.UnitPrice»</td>
+                            <td>«InvoiceItem.AmountWithoutTax»</td>
+                        </tr>
+                        <tr>
+                            <td>«InvoiceItem.ServicePeriod»</td>
+                            <td>«InvoiceItem.Name</td>
+                            <td>«InvoiceItem.Quantity»</td>
+                            <td>«InvoiceItem.UnitOfMeasure»</td>
+                            <td>«InvoiceItem.UnitPrice»</td>
+                            <td>«InvoiceItem.AmountWithoutTax»</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4 well">
+                <h2> Tax Summary</h2>
+                    <table width="100%" class="align-right-2">
+                        <tr>
+                            <th>Description</th>
+                            <th>Amount</th>
+                        </tr>
+                        <tr><td>Federal USF</td><td>«Tax.Amount»</td></tr>
+                        <tr><td>Federal E-911</td><td>«Tax.Amount»</td></tr>
+                        <tr><td>CA E-911</td><td>«Tax.Amount»</td></tr>
+                        <tr><td>CA ULTS</td><td>«Tax.Amount»</td></tr>
+                        <tr><td>CA DDTP</td><td>«Tax.Amount»</td></tr>
+                        <tr><td>CA CHCF-A</td><td>«Tax.Amount»</td></tr>
+                        <tr><td>CA CTF</td><td>«Tax.Amount»</td></tr>
+                        <tr><td>CA CASF</td><td>«Tax.Amount»</td></tr>
+                        <tr><th>Taxation Subtotal</th><th>«Tax.Amount»</th></tr>
+                    </table>
+                </div>
+                <div class="span4 well">
+                    <h2> 
+                        Total Charges<br>
+                         &nbsp;<br>
+                    </h2>
+                    <table class="align-right-2" width="100%">
+                        <tr><td>Prior Balance</td><td>«Prior.Amount»</td></tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr><td>Charges Subtotal</td><td>«subtotal.Amount»</td></tr>
+                        <tr><td>Federal & State Taxes</td><td>«Tax.Amount»</td></tr>
+                        <tr><td>Total Balance</td><td>«Balance.Amount»</td></tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr><td>Payments and Credits</td><td>«Credit.Amount»</td></tr>
+                        <tr><td>Amount Due</td><td>«Invoice.Amount»</td></tr>
+                    </table>
+                </div>
+                <div class="span2 well">
+                    <h2>
+                        Pay Online<br>
+                        &nbsp;<br>
+                    </h2>
+                    <table>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr><td>Pay Online</td></tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr><td>&nbsp;</td></tr>
+                   </table>
+                </div>
