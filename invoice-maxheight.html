@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ringplan Invoice</title>
+        <meta name="description" content="Your Ringplan Invoice">
+        <!-- disable repsonsive <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+         <!-- Remote style sheet -->
+        <link href="./assets/css/bootstrap.css" rel="stylesheet" />
+        <style type="text/css">
+            body {
+                width:8.5in;
+                margin-left: 0.5in;
+                margin-top: 0px;
+            }
+
+            table.align-right-2 td:nth-child(2){
+                text-align: right;
+            }
+
+            .navbar-inner {
+                height: 1.25in;
+                background-color: #d3d3d3;
+
+            }
+
+            .navbar-inner-red {
+                background-color: #600000;
+                background-image: none;
+                background-repeat: no-repeat;
+                filter: none;
+            }
+
+            .full-screen {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+            .normal-screen {
+                position: absolute ;
+            }
+
+            .frontpage {
+                padding-bottom: 0.375in;
+            }
+
+            .page {
+                max-height: 1277px;
+                min-height: 1277px;
+            }
+
+            .halfpage {
+                height: 5in;
+            }
+
+            .fullpage {
+                height: 11in;
+            }
+
+            .innerpagetop {
+                height: 2.5in;
+            }
+
+            .innerpagebottom {
+                height: 7.75in;
+            }
+            .pageend {
+                padding-bottom: 0.25in;
+            }
+            .header {
+                padding-top: 0.375in;
+                height: 1.375n;
+            }
+            .smallheader {
+                padding-top: 0.5in;
+                height: 0.5in;
+            }
+            .innerpage1 {
+                padding-bottom: 0.375in;
+            }
+            .innerpage2 {
+                padding-bottom: 0.375in;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!-- Header Bar-->
+        <!--<div class="navbar navbar-fixed-top">
+            <div id="divNavbarInner" class="navbar-inner"> -->
+        <div class="container page" style="background-color:#ffff00 ;">
+            <div class="row header" style="justify-content:space-between ; padding-bottom: 0.5in;">
+                        <div class="span4">
+                            <img alt="Ringplan" class= style="padding-left: 0.75in;" src="./assets/img/RingPlan-ZTelco96px.png" >
+                        </div>
+                        <div class=span4 style="padding-top: 0.25in ;">
+                                <h1>
+                                    Invoice
+                                </h1>
+                        </div>
+                        <div class="span3" style="padding-top: 0.25in ;text-align: right;margin-left: 0.625in;">
+                            <h4>
+                                «Account.Name» <br>
+                                Invoice Date: «Invoice.InvoiceDate» <br>
+                                Invoice #: «Invoice.InvoiceNumber» <br>
+                            </h4>
+                        </div>
+            </div>
+        <!-- Customer Details-->
+            <div class="row">
+        <!--customer billing info-->
+                        <div class="span3 well smallrow">
+                            <table>
+                            <h2 style="text-align:center ;">Customer Info</h2>
+                            <br>
+                                <tr><td>«Account.Name»</td></tr>
+                                <tr><td>«Bill.Address1»</td></tr>
+                                <tr><td>«Bill.Address2»</td></tr>
+                                <tr><td>«Bill.City», «Bill.State» «Bill.PostalCode»</td></tr>
+                           </table>
+                        </div>
+        <!--account info-->
+                    <div class="span4 well smallrow">
+                        <table>
+                            <h2 style="text-align:center ;">Account Info</h2>
+                            <br>
+                            <tr><td>Account #:</td><td>&nbsp;&nbsp;&nbsp;«Account.AccountNumber»</td></tr>
+                            <tr><td>Invoice #:</td><td>&nbsp;&nbsp;&nbsp;«Invoice.InvoiceNumber»</td></tr>
+                            <tr><td>BTN:</td><td>&nbsp;&nbsp;&nbsp;«BillToContact.WorkPhone»</td></tr>
+                            <tr><td>Pincode:</td><td>&nbsp;&nbsp;&nbsp;«Account.PinCode__c»</td></tr>
+                            <tr><td>Email:</td><td>&nbsp;&nbsp;&nbsp;«BillToContact.WorkEmail»</td>
+                            <tr><td>INVOICE DATE:</td><td>&nbsp;&nbsp;&nbsp;«Invoice.InvoiceDate»</td></tr>
+                            <tr><td>Terms:</td><td>&nbsp;&nbsp;&nbsp;«Account.PaymentTerm»</td></tr>
+                            <tr><td>Invoice Amount:</td><td>&nbsp;&nbsp;&nbsp;«Account.NewBalance»</td></tr>
+                        </table>
+                    </div>
+    <!--marketing blurb-->
+                    <div class="span3 well smallrow">
+                        <h4>Marketing Blurb</h4>
+                    </div>
+            </div>
+        <!-- Summary Section-->
+            <div class="row">
+                <div class="span11 well" style="height: 4.5in;">
+        <!--Charges summary-->
+                        <h2>Location Summary</h2>
+                        <br>
+                        <table width="100%">
+                            <tr><th>Address</th><th>Location ID</th><th>Subtotal</th></tr>
+                            <tr><td>«Location.Address1__c» «Location.Address2__c»</td><td>«Location.ID»</td><td>«Location.Subtotal»</td></tr>
+                            <tr><td>«Location.Address1__c» «Location.Address2__c»</td><td>«Location.ID»</td><td>«Location.Subtotal»</td></tr>
+                            <tr><td>«Location.Address1__c» «Location.Address2__c»</td><td>«Location.ID»</td><td>«Location.Subtotal»</td></tr>
+                            <tr><td>«Location.Address1__c» «Location.Address2__c»</td><td>«Location.ID»</td><td>«Location.Subtotal»</td></tr>
+                            <tr><td>«Location.Address1__c» «Location.Address2__c»</td><td>«Location.ID»</td><td>«Location.Subtotal»</td></tr>
+                            <tr><td>«Location.Address1__c» «Location.Address2__c»</td><td>«Location.ID»</td><td>«Location.Subtotal»</td></tr>
+                            <tr><td>«Location.Address1__c» «Location.Address2__c»</td><td>«Location.ID»</td><td>«Location.Subtotal»</td></tr>
+                            <tr><td>«Location.Address1__c» «Location.Address2__c»</td><td>«Location.ID»</td><td>«Location.Subtotal»</td></tr>
+                            <tr><td>«Location.Address1__c» «Location.Address2__c»</td><td>«Location.ID»</td><td>«Location.Subtotal»</td></tr>
+                            <tr><td>«Location.Address1__c» «Location.Address2__c»</td><td>«Location.ID»</td><td>«Location.Subtotal»</td></tr>
+                            <tr><td>&nbsp;</td><td></td><td></td></tr>
+                            <tr><td>&nbsp;</td><td></td><td></td></tr>
+                            <tr><td></td><td><b>Services Subtotal</b></td><td><b>«Services.Subtotal»</b></td></tr>
+                        </table>
+                </div>
+            </div>
+        <!-- taxes and charges-->
+            <div class="row frontpage">
+                <div class="span4 well smallrow">
+                <h2> Tax Summary</h2>
+                    <table width="100%" class="align-right-2">
+                        <tr>
+                            <th>Description</th>
+                            <th>Amount</th>
+                        </tr>
+                        <tr><td>Federal USF</td><td>«Tax.Amount»</td></tr>
+                        <tr><td>Federal E-911</td><td>«Tax.Amount»</td></tr>
+                        <tr><td>CA E-911</td><td>«Tax.Amount»</td></tr>
+                        <tr><td>CA ULTS</td><td>«Tax.Amount»</td></tr>
+                        <tr><td>CA DDTP</td><td>«Tax.Amount»</td></tr>
+                        <tr><td>CA CHCF-A</td><td>«Tax.Amount»</td></tr>
+                        <tr><td>CA CTF</td><td>«Tax.Amount»</td></tr>
+                        <tr><td>CA CASF</td><td>«Tax.Amount»</td></tr>
+                        <tr><th>Taxation Subtotal</th><th>«Tax.Amount»</th></tr>
+                    </table>
+                </div>
+                <div class="span4 well smallrow">
+                    <h2>
+                        Total Charges<br>
+                         &nbsp;<br>
+                    </h2>
+                    <table class="align-right-2" width="100%">
+                        <tr><td>Prior Balance</td><td>«Prior.Amount»</td></tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr><td>Charges Subtotal</td><td>«subtotal.Amount»</td></tr>
+                        <tr><td>Federal & State Taxes</td><td>«Tax.Amount»</td></tr>
+                        <tr><td>Total Balance</td><td>«Balance.Amount»</td></tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr><td>Payments and Credits</td><td>«Credit.Amount»</td></tr>
+                        <tr><td>Amount Due</td><td>«Invoice.Amount»</td></tr>
+                    </table>
+                </div>
+                <div class="span2 well smallrow">
+                    <h2>
+                        Pay Online<br>
+                        &nbsp;<br>
+                    </h2>
+                </div>
+            </div>
+        </div>
+            <!--Future Page Headers-->
+    <div class="container page" style="background-color:#600000 ;">
+        <div class="row smallheader">
+            <div class="span11 well">
+                    <h3 style="text-align:center;">
+                        «Account.Name»&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Invoice Date: «Invoice.InvoiceDate»&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Invoice #: «Invoice.InvoiceNumber»
+                    </h3>
+            </div>
+        </div>
+        <div class="row">
+            <!-- regulatory info-->
+            <div class="span11 well fullpage" style="font-size: 18px;">
+               <div class="span1">&nbsp;</div>
+               <div class="span9">
+
+                <h1>REQUIRED DISCLOSURES</h1>
+                <br>
+                <h2>Disputes</h2>
+                <br>
+                If you believe there is an error on your bill or have a question about your service, please call Ringplan's customer support at (833) 746-4752.
+                <br>
+                <br>
+                If you are not satisfied with Ringplan's response, submit a complaint to the California Public utilities Commission (CPUC) by visiting http://www.cpuc.ca.gov/complaints/. Billing and service complaints are handled by the CPUC’s Consumer Affairs Branch (CAB), which can be reached by the following means if you prefer not to submit your complaint online:
+                <br>
+                <br>
+                <h3>Telephone</h3>
+                1-800-649-7570 (8:30 AM to 4:30 PM, Monday through Friday)
+                <br>
+                <br>
+                <h3>Mail</h3>
+                California Public Utilities Commission, Consumer Affairs Branch,<br>
+                505 Van Ness Avenue, Room 2003, San Francisco, CA 94102
+                <br>
+                <br>
+                To avoid having service turned off while you wait for the outcome of a complaint to the CPUC specifically regarding the accuracy of your bill, please contact CAB for assistance. If your case meets the eligibility criteria, CAB will provide you with instructions on how to mail a check or money order to be impounded pending resolution of your case. You must continue to pay your current charges while your complaint is under review to keep your service turned on.
+                <br>
+                <br>
+                <br>
+                <br>
+                <h2>Relay Services</h2>
+                <br>
+                If you have limitations hearing or speaking, dial 711 to reach the California Relay Service, which is for those needing direct assistance relaying telephone conversations, as well their friends, family, and business contacts. If you prefer having your calls immediately answered in your mode of communication, dial one of the toll-free language-specific numbers below to be routed to the California Relay Service provider.
+                <br>
+                <br>
+                <table width="70%">
+                    <tr style="text-align:left;"><th>Type of Call</th><th>Language</th><th>Toll-free Number</th></tr>
+                    <tr><td>TTY/VCO/HCO to Voice</td><td>English</td><td>1-800-735-2929</td></tr>
+                    <tr><td>&nbsp;</td><td>Spanish</td><td>1-800-855-3000</td></tr>
+                    <tr><td>Voice to TTY/VCO/HCO</td><td>English</td><td>1-800-735-2929</td></tr>
+                    <tr><td>&nbsp;</td><td>Spanish</td><td>1-800-855-3000</td></tr>
+                    <tr><td>From or to Speech-to-Speech</td><td>English</td><td>1-800-854-7784</td></tr>
+                    <tr><td>&nbsp;</td><td>Spanish</td><td>1-800-854-7784</td></tr>
+                </table>
+              </div>
+            </div>
+        </div>
+    </div>
+<!-- ------   Inner Page Seperator  ------  -->
+    <div class="container page" style="background-color:#006000 ;">
+        <div class="row smallheader">
+            <div class="span11 well">
+                    <h3 style="text-align:center;">
+                        «Account.Name»&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Invoice Date: «Invoice.InvoiceDate»&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Invoice #: «Invoice.InvoiceNumber»
+                    </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span4 innerpagetop well">
+            </div>
+            <div class="span11 well innerpagebottom">
+            </div>
+        </div>
+    </div>
+    <div class="container page" style="background-color:#600000 ;">
+        <div class="row smallheader">
+            <div class="span11 well">
+                    <h3 style="text-align:center;">
+                        «Account.Name»&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Invoice Date: «Invoice.InvoiceDate»&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Invoice #: «Invoice.InvoiceNumber»
+                    </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span11 well fullpage">
+            </div>
+        </div>
+    </div>    
