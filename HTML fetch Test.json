@@ -1,0 +1,1192 @@
+{
+  "__impexVersion": 2,
+  "layoutOption": {
+    "landscape": false,
+    "format": "A4",
+    "margin": {
+      "top": "30mm",
+      "right": "5mm",
+      "bottom": "10mm",
+      "left": "5mm"
+    }
+  },
+  "design": {
+    "counters": {
+      "u_column": 18,
+      "u_row": 8,
+      "u_content_text": 12,
+      "u_content_custom_ImageTool": 4,
+      "u_content_custom_ChargeDetails": 3,
+      "u_content_heading": 3,
+      "u_content_custom_generic_table": 2
+    },
+    "body": {
+      "rows": [
+        {
+          "cells": [
+            49.89,
+            50.11
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "custom",
+                  "slug": "ImageTool",
+                  "values": {
+                    "containerPadding": "10px",
+                    "_meta": {
+                      "htmlID": "u_content_custom_ImageTool_4",
+                      "htmlClassNames": "u_content_custom_ImageTool"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "imageUpload": {
+                      "src": "",
+                      "imageData": "data:image/jpeg;base64,replaceme=",
+                      "showModal": false,
+                      "status": "closed",
+                      "forceUpdate": false,
+                      "errMsg": ""
+                    },
+                    "autoWidth": {
+                      "autoWidth": "auto"
+                    },
+                    "align": "center",
+                    "alt": "",
+                    "link": {}
+                  }
+                }
+              ],
+              "values": {
+                "_meta": {
+                  "htmlID": "u_column_16",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            },
+            {
+              "contents": [
+                {
+                  "type": "heading",
+                  "values": {
+                    "containerPadding": "20px 30px 0px 0px",
+                    "headingType": "h1",
+                    "fontFamily": {
+                      "label": "Arial",
+                      "value": "arial,helvetica,sans-serif"
+                    },
+                    "fontSize": "35px",
+                    "textAlign": "right",
+                    "lineHeight": "140%",
+                    "linkStyle": {
+                      "inherit": true,
+                      "linkColor": "#0000ee",
+                      "linkHoverColor": "#0000ee",
+                      "linkUnderline": true,
+                      "linkHoverUnderline": true
+                    },
+                    "hideDesktop": false,
+                    "_meta": {
+                      "htmlID": "u_content_heading_3",
+                      "htmlClassNames": "u_content_heading"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "text": "Invoice"
+                  }
+                }
+              ],
+              "values": {
+                "_meta": {
+                  "htmlID": "u_column_17",
+                  "htmlClassNames": "u_column"
+                },
+                "border": {},
+                "padding": "0px",
+                "backgroundColor": ""
+              }
+            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "#ffffff",
+            "columnsBackgroundColor": "",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "0px 0px 10px",
+            "hideDesktop": false,
+            "_meta": {
+              "htmlID": "u_row_8",
+              "htmlClassNames": "u_row page_header"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
+          }
+        },
+        {
+          "cells": [
+            30.11,
+            14.34,
+            27.89,
+            27.66
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "text",
+                  "values": {
+                    "containerPadding": "10px",
+                    "textAlign": "left",
+                    "lineHeight": "140%",
+                    "linkStyle": {
+                      "inherit": true,
+                      "linkColor": "#0000ee",
+                      "linkHoverColor": "#0000ee",
+                      "linkUnderline": true,
+                      "linkHoverUnderline": true
+                    },
+                    "hideDesktop": false,
+                    "_meta": {
+                      "htmlID": "u_content_text_7",
+                      "htmlClassNames": "u_content_text"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "text": "<p style=\"font-size: 14px; line-height: 140%;\">Your Company, Inc.</p>\n<p style=\"font-size: 14px; line-height: 140%;\">110 William St, 28th Floor</p>\n<p style=\"font-size: 14px; line-height: 140%;\">New York, NY 10038</p>\n<p style=\"font-size: 14px; line-height: 140%;\">+1 212 232 8294</p>"
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "_meta": {
+                  "htmlID": "u_column_2",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            },
+            {
+              "contents": [],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "_meta": {
+                  "htmlID": "u_column_3",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            },
+            {
+              "contents": [
+                {
+                  "type": "text",
+                  "values": {
+                    "containerPadding": "10px",
+                    "textAlign": "left",
+                    "lineHeight": "140%",
+                    "linkStyle": {
+                      "inherit": true,
+                      "linkColor": "#0000ee",
+                      "linkHoverColor": "#0000ee",
+                      "linkUnderline": true,
+                      "linkHoverUnderline": true
+                    },
+                    "hideDesktop": false,
+                    "_meta": {
+                      "htmlID": "u_content_text_5",
+                      "htmlClassNames": "u_content_text"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "text": "<p style=\"font-size: 14px; line-height: 140%; text-align: right;\">Account Name:</p>\n<p style=\"font-size: 14px; line-height: 140%; text-align: right;\">Invoice Number:</p>\n<p style=\"font-size: 14px; line-height: 140%; text-align: right;\">Invoice Date:</p>\n<p style=\"font-size: 14px; line-height: 140%; text-align: right;\">Currency:</p>\n<p style=\"font-size: 14px; line-height: 140%; text-align: right;\">Payment Term:</p>\n<p style=\"font-size: 14px; line-height: 140%; text-align: right;\">Invoice Due Date:</p>"
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "_meta": {
+                  "htmlID": "u_column_4",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            },
+            {
+              "contents": [
+                {
+                  "type": "text",
+                  "values": {
+                    "containerPadding": "10px",
+                    "textAlign": "left",
+                    "lineHeight": "140%",
+                    "linkStyle": {
+                      "inherit": true,
+                      "linkColor": "#0000ee",
+                      "linkHoverColor": "#0000ee",
+                      "linkUnderline": true,
+                      "linkHoverUnderline": true
+                    },
+                    "hideDesktop": false,
+                    "_meta": {
+                      "htmlID": "u_content_text_6",
+                      "htmlClassNames": "u_content_text"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "text": "<p style=\"font-size: 14px; line-height: 140%; text-align: left;\">{{#Invoice}}{{Account.Name}}</p>\n<p style=\"font-size: 14px; line-height: 140%; text-align: left;\">{{InvoiceNumber}}</p>\n<p style=\"font-size: 14px; line-height: 140%; text-align: left;\">{{InvoiceDate}}</p>\n<p style=\"font-size: 14px; line-height: 140%; text-align: left;\">{{Account.Currency}}</p>\n<p style=\"font-size: 14px; line-height: 140%; text-align: left;\">{{Account.PaymentTerm}}</p>\n<p style=\"font-size: 14px; line-height: 140%; text-align: left;\">{{DueDate}}</p>\n<p style=\"font-size: 14px; line-height: 140%; text-align: left;\">{{/Invoice}}</p>"
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "_meta": {
+                  "htmlID": "u_column_8",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "",
+            "columnsBackgroundColor": "",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "5px 0px 10px",
+            "hideDesktop": false,
+            "_meta": {
+              "htmlID": "u_row_2",
+              "htmlClassNames": "u_row"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
+          }
+        },
+        {
+          "cells": [
+            33.33,
+            23.34,
+            43.33
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "text",
+                  "values": {
+                    "containerPadding": "10px",
+                    "textAlign": "left",
+                    "lineHeight": "140%",
+                    "linkStyle": {
+                      "inherit": true,
+                      "linkColor": "#0000ee",
+                      "linkHoverColor": "#0000ee",
+                      "linkUnderline": true,
+                      "linkHoverUnderline": true
+                    },
+                    "hideDesktop": false,
+                    "_meta": {
+                      "htmlID": "u_content_text_3",
+                      "htmlClassNames": "u_content_text"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "text": "<p style=\"font-size: 14px; line-height: 140%;\"><span style=\"font-size: 16px; line-height: 22.4px;\"><strong>Bill To:</strong></span></p>\n<p style=\"font-size: 14px; line-height: 140%;\">{{#Invoice.Account.BillTo}}</p>\n<p style=\"font-size: 14px; line-height: 140%;\">{{FirstName}} {{LastName}}</p>\n<p style=\"font-size: 14px; line-height: 140%;\">{{Address1}}</p>\n<p style=\"font-size: 14px; line-height: 140%;\">{{City}}, {{State}}</p>\n<p style=\"font-size: 14px; line-height: 140%;\">{{PostalCode}}</p>\n<p style=\"font-size: 14px; line-height: 140%;\">{{WorkEmail}}</p>\n<p style=\"font-size: 14px; line-height: 140%;\">{{WorkPhone}}</p>\n<p style=\"font-size: 14px; line-height: 140%;\">{{/Invoice.Account.BillTo}}</p>"
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "_meta": {
+                  "htmlID": "u_column_5",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            },
+            {
+              "contents": [],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "_meta": {
+                  "htmlID": "u_column_6",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            },
+            {
+              "contents": [
+                {
+                  "type": "text",
+                  "values": {
+                    "containerPadding": "10px",
+                    "textAlign": "left",
+                    "lineHeight": "140%",
+                    "linkStyle": {
+                      "inherit": true,
+                      "linkColor": "#0000ee",
+                      "linkHoverColor": "#0000ee",
+                      "linkUnderline": true,
+                      "linkHoverUnderline": true
+                    },
+                    "hideDesktop": false,
+                    "_meta": {
+                      "htmlID": "u_content_text_4",
+                      "htmlClassNames": "u_content_text"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "text": "<p style=\"font-size: 14px; line-height: 140%;\"><span style=\"font-size: 16px; line-height: 22.4px;\"><strong>Sold To:</strong></span></p>\n<p style=\"font-size: 14px; line-height: 140%;\">{{#Invoice.Account.SoldTo}}</p>\n<p style=\"font-size: 14px; line-height: 140%;\">{{FirstName}} {{LastName}}</p>\n<p style=\"font-size: 14px; line-height: 140%;\">{{Address1}}</p>\n<p style=\"font-size: 14px; line-height: 140%;\">{{City}}, {{State}}</p>\n<p style=\"font-size: 14px; line-height: 140%;\">{{PostalCode}}</p>\n<p style=\"font-size: 14px; line-height: 140%;\">{{WorkEmail}}</p>\n<p style=\"font-size: 14px; line-height: 140%;\">{{WorkPhone}}</p>\n<p style=\"font-size: 14px; line-height: 140%;\">{{/Invoice.Account.SoldTo}}</p>"
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "_meta": {
+                  "htmlID": "u_column_7",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "",
+            "columnsBackgroundColor": "",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "0px",
+            "hideDesktop": false,
+            "_meta": {
+              "htmlID": "u_row_3",
+              "htmlClassNames": "u_row"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
+          }
+        },
+        {
+          "cells": [
+            1
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "text",
+                  "values": {
+                    "containerPadding": "10px",
+                    "textAlign": "left",
+                    "lineHeight": "140%",
+                    "linkStyle": {
+                      "inherit": true,
+                      "linkColor": "#0000ee",
+                      "linkHoverColor": "#0000ee",
+                      "linkUnderline": true,
+                      "linkHoverUnderline": true
+                    },
+                    "hideDesktop": false,
+                    "_meta": {
+                      "htmlID": "u_content_text_1",
+                      "htmlClassNames": "u_content_text"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "text": "<p style=\"font-size: 14px; line-height: 140%;\"><span style=\"font-size: 16px; line-height: 22.4px;\"><strong>Charge Details</strong></span></p>"
+                  }
+                }
+              ],
+              "values": {
+                "border": {},
+                "padding": "0px",
+                "backgroundColor": "",
+                "_meta": {
+                  "htmlID": "u_column_1",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "",
+            "columnsBackgroundColor": "",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "10px 0px 0px",
+            "hideDesktop": false,
+            "_meta": {
+              "htmlID": "u_row_1",
+              "htmlClassNames": "u_row"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
+          }
+        },
+        {
+          "cells": [
+            1
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "custom",
+                  "slug": "generic_table",
+                  "values": {
+                    "containerPadding": "10px",
+                    "_meta": {
+                      "htmlID": "u_content_custom_generic_table_2",
+                      "htmlClassNames": "u_content_custom_generic_table"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "tableMeta": {
+                      "options": [],
+                      "objects": [],
+                      "objectTypes": [],
+                      "selectedColumns": [
+                        {
+                          "fieldName": "ChargeName",
+                          "label": "Charge Name",
+                          "decorator": "",
+                          "advFieldName": false,
+                          "width": "20%",
+                          "alignment": ""
+                        },
+                        {
+                          "fieldName": "{{ServiceStartDate|Localise}} - {{ServiceEndDate|Localise}}",
+                          "label": "Service Period",
+                          "decorator": "",
+                          "advFieldName": true,
+                          "width": "15%",
+                          "alignment": ""
+                        },
+                        {
+                          "fieldName": "Quantity",
+                          "label": "Qty",
+                          "decorator": "Localise",
+                          "advFieldName": false,
+                          "width": "auto",
+                          "alignment": ""
+                        },
+                        {
+                          "fieldName": "UnitPrice",
+                          "label": "Unit Price",
+                          "decorator": "Localise",
+                          "advFieldName": false,
+                          "width": "auto",
+                          "alignment": "right"
+                        },
+                        {
+                          "fieldName": "ChargeAmount",
+                          "label": "Subtotal",
+                          "decorator": "Round(2)|Localise",
+                          "advFieldName": false,
+                          "width": "auto",
+                          "alignment": "right"
+                        },
+                        {
+                          "fieldName": "TaxAmount",
+                          "label": "Tax",
+                          "decorator": "Round(2)|Localise",
+                          "advFieldName": false,
+                          "width": "auto",
+                          "alignment": "right"
+                        },
+                        {
+                          "fieldName": "{{#Wp_Eval}}{{ChargeAmount}}+{{TaxAmount}}|Round(2)|Localise{{/Wp_Eval}}",
+                          "label": "Total",
+                          "decorator": "",
+                          "advFieldName": true,
+                          "width": "auto",
+                          "alignment": "right"
+                        }
+                      ],
+                      "advFieldName": true,
+                      "filterBy": [],
+                      "sortBy": [
+                        {
+                          "key": "RatePlanCharge.ChargeNumber",
+                          "direction": "ASC"
+                        }
+                      ],
+                      "groupBy": [],
+                      "showAddColumnModal": false,
+                      "isEditModal": false,
+                      "addModalTitle": "",
+                      "forceUpdate": false,
+                      "rowField": "selectedColumns",
+                      "rowIndex": "4",
+                      "showSortByModal": false,
+                      "showFilterByModal": false,
+                      "showGroupByModal": false,
+                      "selectedObject": {
+                        "label": "InvoiceItems: list of InvoiceItem",
+                        "type": "invoiceitem",
+                        "attrName": "invoiceitems",
+                        "isList": true
+                      },
+                      "secondSelectedObject": null,
+                      "isFirstSelectObject": true,
+                      "showObjectSelectModal": false
+                    },
+                    "headerFontFamily": {
+                      "label": "Arial",
+                      "value": "arial,helvetica,sans-serif"
+                    },
+                    "headerFontSize": "14",
+                    "headerBIU": {
+                      "textLabel": "Formatting",
+                      "textBold": false,
+                      "textItalic": false,
+                      "textUnderline": false
+                    },
+                    "headerAlign": "center",
+                    "headerTextColor": "#464C51",
+                    "headerBgColor": "#F6F7F8",
+                    "bodyFontFamily": {
+                      "label": "Arial",
+                      "value": "arial,helvetica,sans-serif"
+                    },
+                    "bodyFontSize": "14",
+                    "bodyBIU": {
+                      "textLabel": "Formatting",
+                      "textBold": false,
+                      "textItalic": false,
+                      "textUnderline": false
+                    },
+                    "bodyAlign": "left",
+                    "bodyTextColor": "#000000",
+                    "bodyBgColor": "#FFFFFF",
+                    "tableHeaderPadding": {
+                      "label": "Table Header",
+                      "paddingTop": 12,
+                      "paddingBottom": 12,
+                      "paddingRight": 12,
+                      "paddingLeft": 12
+                    },
+                    "tableBodyPadding": {
+                      "label": "Table Body",
+                      "paddingTop": 12,
+                      "paddingBottom": 12,
+                      "paddingRight": 12,
+                      "paddingLeft": 12
+                    },
+                    "tableHeaderBorder": {
+                      "borderTopWidth": "1px",
+                      "borderTopStyle": "solid",
+                      "borderTopColor": "#E0E0E0",
+                      "borderLeftWidth": "1px",
+                      "borderLeftStyle": "solid",
+                      "borderLeftColor": "#E0E0E0",
+                      "borderRightWidth": "1px",
+                      "borderRightStyle": "solid",
+                      "borderRightColor": "#E0E0E0",
+                      "borderBottomWidth": "1px",
+                      "borderBottomStyle": "solid",
+                      "borderBottomColor": "#E0E0E0"
+                    },
+                    "tableBodyBorder": {
+                      "borderTopWidth": "1px",
+                      "borderTopStyle": "solid",
+                      "borderTopColor": "#E0E0E0",
+                      "borderLeftWidth": "1px",
+                      "borderLeftStyle": "solid",
+                      "borderLeftColor": "#E0E0E0",
+                      "borderRightWidth": "1px",
+                      "borderRightStyle": "solid",
+                      "borderRightColor": "#E0E0E0",
+                      "borderBottomWidth": "1px",
+                      "borderBottomStyle": "solid",
+                      "borderBottomColor": "#E0E0E0"
+                    }
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "_meta": {
+                  "htmlID": "u_column_9",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "",
+            "columnsBackgroundColor": "",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "0px",
+            "hideDesktop": false,
+            "_meta": {
+              "htmlID": "u_row_4",
+              "htmlClassNames": "u_row"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
+          }
+        },
+        {
+          "cells": [
+            1
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "text",
+                  "values": {
+                    "containerPadding": "10px",
+                    "textAlign": "left",
+                    "lineHeight": "140%",
+                    "linkStyle": {
+                      "inherit": true,
+                      "linkColor": "#0000ee",
+                      "linkHoverColor": "#0000ee",
+                      "linkUnderline": true,
+                      "linkHoverUnderline": true
+                    },
+                    "hideDesktop": false,
+                    "_meta": {
+                      "htmlID": "u_content_text_11",
+                      "htmlClassNames": "u_content_text"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "text": "<p style=\"font-size: 14px; line-height: 140%;\"><span style=\"font-size: 16px; line-height: 22.4px;\"><strong>Invoice Total</strong></span></p>"
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "_meta": {
+                  "htmlID": "u_column_13",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "",
+            "columnsBackgroundColor": "",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "0px",
+            "hideDesktop": false,
+            "_meta": {
+              "htmlID": "u_row_6",
+              "htmlClassNames": "u_row"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
+          }
+        },
+        {
+          "cells": [
+            41.89,
+            35.22,
+            22.89
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "text",
+                  "values": {
+                    "containerPadding": "10px",
+                    "textAlign": "left",
+                    "lineHeight": "140%",
+                    "linkStyle": {
+                      "inherit": true,
+                      "linkColor": "#0000ee",
+                      "linkHoverColor": "#0000ee",
+                      "linkUnderline": true,
+                      "linkHoverUnderline": true
+                    },
+                    "hideDesktop": false,
+                    "_meta": {
+                      "htmlID": "u_content_text_8",
+                      "htmlClassNames": "u_content_text"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "text": "<p style=\"font-size: 14px; line-height: 140%;\">Customer Notes:</p>\n<p style=\"font-size: 14px; line-height: 140%;\">{{Invoice.Comments}}</p>"
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "_meta": {
+                  "htmlID": "u_column_10",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            },
+            {
+              "contents": [
+                {
+                  "type": "text",
+                  "values": {
+                    "containerPadding": "10px",
+                    "textAlign": "left",
+                    "lineHeight": "140%",
+                    "linkStyle": {
+                      "inherit": true,
+                      "linkColor": "#0000ee",
+                      "linkHoverColor": "#0000ee",
+                      "linkUnderline": true,
+                      "linkHoverUnderline": true
+                    },
+                    "hideDesktop": false,
+                    "_meta": {
+                      "htmlID": "u_content_text_10",
+                      "htmlClassNames": "u_content_text"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "text": "<p style=\"font-size: 14px; line-height: 140%; text-align: right;\">Subtotal:</p>\n<p style=\"font-size: 14px; line-height: 140%; text-align: right;\">Tax:</p>\n<p style=\"font-size: 14px; line-height: 140%; text-align: right;\">Total:</p>\n<p style=\"font-size: 14px; line-height: 140%; text-align: right;\">Invoice Balance:</p>"
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "_meta": {
+                  "htmlID": "u_column_11",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            },
+            {
+              "contents": [
+                {
+                  "type": "text",
+                  "values": {
+                    "containerPadding": "10px",
+                    "textAlign": "left",
+                    "lineHeight": "140%",
+                    "linkStyle": {
+                      "inherit": true,
+                      "linkColor": "#0000ee",
+                      "linkHoverColor": "#0000ee",
+                      "linkUnderline": true,
+                      "linkHoverUnderline": true
+                    },
+                    "hideDesktop": false,
+                    "_meta": {
+                      "htmlID": "u_content_text_9",
+                      "htmlClassNames": "u_content_text"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "text": "<p style=\"font-size: 14px; line-height: 140%; text-align: right;\">{{Invoice.AmountWithoutTax}}</p>\n<p style=\"font-size: 14px; line-height: 140%; text-align: right;\">{{Invoice.TaxAmount}}</p>\n<p style=\"font-size: 14px; line-height: 140%; text-align: right;\">{{Invoice.Amount}}</p>\n<p style=\"font-size: 14px; line-height: 140%; text-align: right;\">{{Invoice.Balance}}</p>"
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "_meta": {
+                  "htmlID": "u_column_12",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "",
+            "columnsBackgroundColor": "",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "0px",
+            "hideDesktop": false,
+            "_meta": {
+              "htmlID": "u_row_5",
+              "htmlClassNames": "u_row"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
+          }
+        },
+        {
+          "cells": [
+            1
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "custom",
+                  "slug": "summary_table",
+                  "values": {
+                    "containerPadding": "10px",
+                    "_meta": {
+                      "htmlID": "u_content_custom_generic_table_2",
+                      "htmlClassNames": "u_content_custom_generic_table"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "tableMeta": {
+                      "options": [],
+                      "objects": [],
+                      "objectTypes": [],
+                      "aggregation": [],
+                      "selectedColumns": [
+                        {
+                          "fieldName": "ChargeName",
+                          "label": "Charge Name",
+                          "decorator": "",
+                          "advFieldName": false,
+                          "width": "20%",
+                          "alignment": ""
+                        },
+                        {
+                          "fieldName": "{{ServiceStartDate|Localise}} - {{ServiceEndDate|Localise}}",
+                          "label": "Service Period",
+                          "decorator": "",
+                          "advFieldName": true,
+                          "width": "15%",
+                          "alignment": ""
+                        },
+                        {
+                          "fieldName": "Quantity",
+                          "label": "Qty",
+                          "decorator": "Localise",
+                          "advFieldName": false,
+                          "width": "auto",
+                          "alignment": ""
+                        },
+                        {
+                          "fieldName": "UnitPrice",
+                          "label": "Unit Price",
+                          "decorator": "Localise",
+                          "advFieldName": false,
+                          "width": "auto",
+                          "alignment": "right"
+                        },
+                        {
+                          "fieldName": "ChargeAmount",
+                          "label": "Subtotal",
+                          "decorator": "Round(2)|Localise",
+                          "advFieldName": false,
+                          "width": "auto",
+                          "alignment": "right"
+                        },
+                        {
+                          "fieldName": "TaxAmount",
+                          "label": "Tax",
+                          "decorator": "Round(2)|Localise",
+                          "advFieldName": false,
+                          "width": "auto",
+                          "alignment": "right"
+                        },
+                        {
+                          "fieldName": "{{#Wp_Eval}}{{ChargeAmount}}+{{TaxAmount}}|Round(2)|Localise{{/Wp_Eval}}",
+                          "label": "Total",
+                          "decorator": "",
+                          "advFieldName": true,
+                          "width": "auto",
+                          "alignment": "right"
+                        }
+                      ],
+                      "advFieldName": true,
+                      "filterBy": [],
+                      "sortBy": [
+                        {
+                          "key": "RatePlanCharge.ChargeNumber",
+                          "direction": "ASC"
+                        }
+                      ],
+                      "groupBy": [],
+                      "showAddColumnModal": false,
+                      "isEditModal": false,
+                      "addModalTitle": "",
+                      "forceUpdate": false,
+                      "rowField": "selectedColumns",
+                      "rowIndex": "4",
+                      "showSortByModal": false,
+                      "showFilterByModal": false,
+                      "showGroupByModal": false,
+                      "selectedObject": {
+                        "label": "InvoiceItems: list of InvoiceItem",
+                        "type": "invoiceitem",
+                        "attrName": "invoiceitems",
+                        "isList": true
+                      },
+                      "secondSelectedObject": null,
+                      "isFirstSelectObject": true,
+                      "showObjectSelectModal": false
+                    },
+                    "headerFontFamily": {
+                      "label": "Arial",
+                      "value": "arial,helvetica,sans-serif"
+                    },
+                    "headerFontSize": "14",
+                    "headerBIU": {
+                      "textLabel": "Formatting",
+                      "textBold": false,
+                      "textItalic": false,
+                      "textUnderline": false
+                    },
+                    "headerAlign": "center",
+                    "headerTextColor": "#464C51",
+                    "headerBgColor": "#F6F7F8",
+                    "bodyFontFamily": {
+                      "label": "Arial",
+                      "value": "arial,helvetica,sans-serif"
+                    },
+                    "bodyFontSize": "14",
+                    "bodyBIU": {
+                      "textLabel": "Formatting",
+                      "textBold": false,
+                      "textItalic": false,
+                      "textUnderline": false
+                    },
+                    "bodyAlign": "left",
+                    "bodyTextColor": "#000000",
+                    "bodyBgColor": "#FFFFFF",
+                    "tableHeaderPadding": {
+                      "label": "Table Header",
+                      "paddingTop": 12,
+                      "paddingBottom": 12,
+                      "paddingRight": 12,
+                      "paddingLeft": 12
+                    },
+                    "tableBodyPadding": {
+                      "label": "Table Body",
+                      "paddingTop": 12,
+                      "paddingBottom": 12,
+                      "paddingRight": 12,
+                      "paddingLeft": 12
+                    },
+                    "tableHeaderBorder": {
+                      "borderTopWidth": "1px",
+                      "borderTopStyle": "solid",
+                      "borderTopColor": "#E0E0E0",
+                      "borderLeftWidth": "1px",
+                      "borderLeftStyle": "solid",
+                      "borderLeftColor": "#E0E0E0",
+                      "borderRightWidth": "1px",
+                      "borderRightStyle": "solid",
+                      "borderRightColor": "#E0E0E0",
+                      "borderBottomWidth": "1px",
+                      "borderBottomStyle": "solid",
+                      "borderBottomColor": "#E0E0E0"
+                    },
+                    "tableBodyBorder": {
+                      "borderTopWidth": "1px",
+                      "borderTopStyle": "solid",
+                      "borderTopColor": "#E0E0E0",
+                      "borderLeftWidth": "1px",
+                      "borderLeftStyle": "solid",
+                      "borderLeftColor": "#E0E0E0",
+                      "borderRightWidth": "1px",
+                      "borderRightStyle": "solid",
+                      "borderRightColor": "#E0E0E0",
+                      "borderBottomWidth": "1px",
+                      "borderBottomStyle": "solid",
+                      "borderBottomColor": "#E0E0E0"
+                    }
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "_meta": {
+                  "htmlID": "u_column_9",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "",
+            "columnsBackgroundColor": "",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "0px",
+            "hideDesktop": false,
+            "_meta": {
+              "htmlID": "u_row_4",
+              "htmlClassNames": "u_row"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
+          }
+        }
+      ],
+      "values": {
+        "textColor": "#000000",
+        "backgroundColor": "#ffffff",
+        "backgroundImage": {
+          "url": "",
+          "fullWidth": true,
+          "repeat": false,
+          "center": true,
+          "cover": false
+        },
+        "contentWidth": "900px",
+        "contentAlign": "center",
+        "fontFamily": {
+          "label": "Arial",
+          "value": "arial,helvetica,sans-serif"
+        },
+        "linkStyle": {
+          "body": true,
+          "linkColor": "#0000ee",
+          "linkHoverColor": "#0000ee",
+          "linkUnderline": true,
+          "linkHoverUnderline": true
+        },
+        "preheaderText": "",
+        "_meta": {
+          "htmlID": "u_body",
+          "htmlClassNames": "u_body"
+        }
+      }
+    },
+    "schemaVersion": 6
+  }
+}
