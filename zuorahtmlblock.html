@@ -235,3 +235,61 @@
 </tr>
 </thead>
 {{/Invoice}}
+
+<!-- subscription detail-->
+<div>
+  {{#Invoice}}
+  <table class="table-grid u_content_custom_table">
+  <thead><tr>
+    <th style="width:8%; ">
+        Sub ID
+    </th>
+    <th style="width:12%; ">
+        Change ID
+    </th>
+    <th style="width:12%; ">
+        Service Period
+    </th>
+    <th style="width:auto; ">
+        Item
+    </th>
+    <th style="width:10%; ">
+        QTY
+    </th>
+    <th style="width:10%; ">
+        Price
+    </th>
+    <th style="width:12%; ">
+        Subtotal
+    </th></tr></thead>
+  <tbody>
+  
+    {{#InvoiceItems|FilterByValue(ChargeAmount,NE,0)|FilterByValue(Quantity,NE,0)|SortBy(Subscription.Name,ASC,AmendmentId,ASC,ChargeName,ASC)|GroupBy(Subscription.Name)}}
+    {{Cmd_Assign(BySubscriptionName,_Group)}}{{#BySubscriptionName}}
+    
+    
+  
+  <tr style=" ">
+    
+      {{^Subscription.Name|EqualToVar(BySubscriptionNameKey)}}
+        <td rowspan="{{BySubscriptionName|Size}}" style="text-align: center;font-family:monospace; ">
+          {{Subscription.Name|Substr(6,13)}}
+        </td>
+      {{/Subscription.Name|EqualToVar(BySubscriptionNameKey)}}  
+      <td style="text-align: center;font-family:monospace; ">{{AmendmentId|Substr(26,32)}}</td>
+      <td style="font-family:monospace; ">{{ServiceStartDate|Localise}}<br>{{ServiceEndDate|Localise}}</td>
+      <td style="font-family:monospace; ">{{ChargeName}}</td>
+      <td style="text-align:center;font-family:monospace;">{{Quantity|Round(0)}}</td>
+      <td style="text-align:right;font-family:monospace;">${{UnitPrice|Round(2)}}</td>
+      <td style="text-align:right;font-family:monospace;">${{ChargeAmount|Round(2)}}</td>
+  </tr>
+  
+    
+    
+    {{/BySubscriptionName}}
+    {{/InvoiceItems|FilterByValue(ChargeAmount,NE,0)|FilterByValue(Quantity,NE,0)|SortBy(Subscription.Name,ASC,AmendmentId,ASC,ChargeName,ASC)|GroupBy(Subscription.Name)}}
+  
+  </tbody>
+  </table>
+  {{/Invoice}}
+  </div>
