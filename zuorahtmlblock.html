@@ -1,0 +1,237 @@
+<!-- header style block-->
+<style>
+    
+    #u_content_custom_table{
+      word-break: break-all;
+    }
+    .u_content_custom_table.table-grid {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+    }
+    .u_content_custom_table.table-grid tr td,
+    .u_content_custom_table.table-grid tr th{
+      word-break: break-word;      
+    }
+    .u_content_custom_table.table-grid tr th{
+      
+    font-family:'Montserrat',sans-serif;font-size:14px;text-align:center;color:#000000;background-color:#FFFFFF;;padding-left:2px;padding-right:2px;padding-top:2px;padding-bottom:2px; text-decoration: auto; font-weight: normal; font-style: normal; border-top: 1px solid #E0E0E0; border-right: 1px solid #E0E0E0; border-left: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0;
+  
+    }
+    .u_content_custom_table.table-grid tr td{
+      
+    font-family:'Montserrat',sans-serif;font-size:12px;text-align:left;color:#000000;background-color:#FFFFFF;padding-left:2px;padding-right:2px;padding-top:2px;padding-bottom:2px; text-decoration: auto; font-weight: normal; font-style: normal; border-top: 1px solid #E0E0E0; border-right: 1px solid #E0E0E0; border-left: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0;
+  
+    }
+
+    #u_content_custom_account{
+      word-break: break-all;
+    }
+    .u_content_custom_account.table-grid {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+    }
+    .u_content_custom_account.table-grid tr td{
+      word-break: break-word;      
+    }
+    .u_content_custom_account.table-grid tr td{
+      
+    font-family:'Montserrat',sans-serif;font-size:16px;text-align:left;color:#000000;background-color:#FFFFFF;padding-left:2px;padding-right:2px;padding-top:2px;padding-bottom:2px; text-decoration: auto; font-weight: normal; font-style: normal; border-top: 1px solid #E0E0E0; border-right: 1px solid #E0E0E0; border-left: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0;
+  
+    }
+  
+    #u_content_custom_header{
+      word-break: break-all;
+    }
+    .u_content_custom_header.table-grid {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+    }
+    .u_content_custom_header.table-grid tr th{
+      word-break: break-word;      
+    }
+    .u_content_custom_header.table-grid tr th{
+      
+    width:auto;font-family:'Montserrat',sans-serif;font-size:16px;text-align:center;color:#000000;background-color:#FFFFFF;;padding-left:2px;padding-right:2px;padding-top:2px;padding-bottom:2px; text-decoration: auto; font-weight: normal; font-style: normal; border-top: 1px solid #E0E0E0; border-right: 1px solid #E0E0E0; border-left: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0;
+  
+    }
+
+</style>
+  
+<!-- Subscription Summary Table-->
+
+{{#Invoice}}
+<table class="table-grid u_content_custom_table">
+<thead><tr>
+    <th style="width:auto; ">
+        Subscription ID
+    </th>
+    <th style="width:20%;">
+        Amount
+    </th></tr></thead>
+<tbody>
+  
+    {{#InvoiceItems|GroupBy(Subscription.Name)}}
+    {{Cmd_Assign(BySubscriptionName,_Group)}}
+  
+  <tr>
+    
+        <td  style=" ">
+          {{#BySubscriptionName|Nth(1)}}
+          {{Subscription.Name}}
+          {{/BySubscriptionName|Nth(1)}}
+        </td>
+      <td style="text-align:right;font-family:monospace; ">
+            {{BySubscriptionName|Sum(ChargeAmount)|Round(2)|Localise}}
+          </td>
+  </tr>
+  
+    
+    {{/InvoiceItems|GroupBy(Subscription.Name)}}
+  
+</tbody>
+</table>
+{{/Invoice}}
+
+<!--Account Table-->
+      
+{{#Invoice}}
+<table class="table-grid u_content_custom_account">
+<tbody>
+    <tr><td style="width: 30%;">Account #:</td><td>&nbsp;&nbsp;&nbsp;{{Account.AccountNumber}}</td></tr>
+    <tr><td>Invoice #:</td><td>&nbsp;&nbsp;&nbsp;{{Invoice.InvoiceNumber}}</td></tr>
+    <tr><td>Pincode:</td><td>&nbsp;&nbsp;&nbsp;{{Account.PinCode__c}}</td></tr>
+    <tr><td>Invoice Date:</td><td>&nbsp;&nbsp;&nbsp;{{Invoice.InvoiceDate}}</td></tr>
+    <tr><td>Terms:</td><td>&nbsp;&nbsp;&nbsp;{{Account.PaymentTerm}}</td></tr>
+    <tr><td>Invoice Amount:</td><td>&nbsp;&nbsp;&nbsp;{{Amount}}</td></tr>
+</tbody>
+</table>
+{{/Invoice}}
+
+<!--tax summary-->
+      
+   
+{{#Invoice}}
+<table class="table-grid u_content_custom_table">
+<thead><tr>
+    <th style="width:auto; ">
+        Name
+    </th>
+    <th style="width:25%;">
+        Amount
+    </th></tr></thead>
+<tbody>
+  
+    {{#InvoiceItems|FlatMap(TaxationItems)|FilterByValue(TaxAmount,NE,0)|FilterByValue(Name,NOT_NULL)|SortBy(Name,ASC)|GroupBy(Name)}}
+    {{Cmd_Assign(ByName,_Group)}}
+  
+  <tr>
+    
+        <td  style="font-size: 8px;">
+          {{#ByName|Nth(1)}}
+          {{Name}}
+          {{/ByName|Nth(1)}}
+        </td>
+      <td style="text-align:right;font-family:monospace;font-size: 8px; ">
+            ${{ByName|Sum(TaxAmount)|Round(2)|Localise}}
+          </td>
+  </tr>
+  
+    
+    {{/InvoiceItems|FlatMap(TaxationItems)|FilterByValue(TaxAmount,NE,0)|FilterByValue(Name,NOT_NULL)|SortBy(Name,ASC)|GroupBy(Name)}}
+  
+</tbody>
+</table>
+{{/Invoice}}
+
+
+<!--Charge Summary-->
+      
+{{#Invoice}}
+<table class="table-grid u_content_custom_account">
+<tbody>
+<tr>  
+  <td  style=" ">
+  Subscription Charges:
+  </td>
+  <td style="text-align:right;font-family: monospace;width:35%; ">
+  ${{AmountWithoutTax}}
+  </td>
+  </tr>
+    <tr>  
+  <td  style=" ">
+  Taxes & Fees:
+  </td>
+  <td style="text-align:right;font-family: monospace; ">
+  ${{TaxAmount}}
+  </td>
+  </tr>
+  <tr>
+    <td>
+        Subtotal:
+    </td>
+    <td style="text-align:right;font-family: monospace; ">
+        ${{Amount}}
+    </td>
+  </tr>
+  <tr>
+  <td>
+  &nbsp;
+  </td>
+  <td>
+  &nbsp;
+  </tr>
+    <tr>  
+  <td  style=" ">
+  Adjustments:
+  </td>
+  <td style="text-align:right;font-family: monospace; ">
+  ${{AdjustmentAmount}}
+  </td>
+  </tr>
+    <tr>  
+  <td  style=" ">
+  Payments:
+  </td>
+  <td style="text-align:right;font-family: monospace; ">
+  ${{PaymentAmount}}
+  </td>
+  </tr>
+     <tr>
+  <td>
+  &nbsp;
+  </td>
+  <td>
+  &nbsp;
+  </tr>
+    <tr>  
+  <td  style=" ">
+  Total Amount Due:
+  </td>
+  <td style="text-align:right;font-family: monospace; ">
+  ${{Balance}}
+  </td>
+  </tr>
+</tbody>
+</table>
+{{/Invoice}}
+
+<!--header-->
+{{#Invoice}}
+<table class="table-grid u_content_custom_header">
+<thead>
+<tr>
+    <th>
+        {{Account.Name}}
+    </th>
+    <th>
+        {{InvoiceNumber}}
+    </th>
+    <th>
+        {{InvoiceDate}}
+    </th>
+</tr>
+</thead>
+{{/Invoice}}
