@@ -154,10 +154,10 @@
 <tbody>
 <tr>  
   <td  style=" ">
-  Subscription Charges:
+  Subscriptions:
   </td>
   <td style="text-align:right;font-family: monospace;width:35%; ">
-  ${{AmountWithoutTax}}
+  ${{AmountWithoutTax|Round(2)}}
   </td>
   </tr>
     <tr>  
@@ -165,7 +165,7 @@
   Taxes & Fees:
   </td>
   <td style="text-align:right;font-family: monospace; ">
-  ${{TaxAmount}}
+  ${{TaxAmount|Round(2)}}
   </td>
   </tr>
   <tr>
@@ -173,7 +173,7 @@
         Subtotal:
     </td>
     <td style="text-align:right;font-family: monospace; ">
-        ${{Amount}}
+        ${{Amount|Round(2)}}
     </td>
   </tr>
   <tr>
@@ -188,7 +188,7 @@
   Adjustments:
   </td>
   <td style="text-align:right;font-family: monospace; ">
-  ${{AdjustmentAmount}}
+  ${{AdjustmentAmount|Round(2)}}
   </td>
   </tr>
     <tr>  
@@ -196,7 +196,7 @@
   Payments:
   </td>
   <td style="text-align:right;font-family: monospace; ">
-  ${{PaymentAmount}}
+  ${{PaymentAmount|Round(2)}}
   </td>
   </tr>
      <tr>
@@ -211,7 +211,7 @@
   Total Amount Due:
   </td>
   <td style="text-align:right;font-family: monospace; ">
-  ${{Balance}}
+  ${{Balance|Round(2)}}
   </td>
   </tr>
 </tbody>
