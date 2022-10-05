@@ -1,1237 +1,1809 @@
 {
-    "__impexVersion": 2,
-    "layoutOption": {
-      "landscape": false,
-      "format": "A4",
-      "margin": {
-        "top": "5mm",
-        "right": "5mm",
-        "bottom": "5mm",
-        "left": "5mm"
-      }
+  "__impexVersion": 2,
+  "layoutOption": {
+    "landscape": false,
+    "format": "Letter",
+    "margin": {
+      "top": "5mm",
+      "right": "0mm",
+      "bottom": "0mm",
+      "left": "0mm"
+    }
+  },
+  "design": {
+    "counters": {
+      "u_column": 44,
+      "u_row": 33,
+      "u_content_divider": 8,
+      "u_content_custom_ImageTool": 1,
+      "u_content_heading": 15,
+      "u_content_text": 7,
+      "u_content_custom_generic_table": 9,
+      "u_content_custom_PageBreak": 12,
+      "u_content_custom_summary_table": 12,
+      "u_content_custom_ChargeDetails": 3,
+      "u_content_custom_MergeField": 1,
+      "u_content_custom_TaxSummary": 2,
+      "u_content_custom_Transactions": 1,
+      "u_content_html": 16,
+      "u_content_custom_UsageDetails": 1
     },
-    "design": {
-      "counters": {
-        "u_column": 31,
-        "u_row": 21,
-        "u_content_divider": 8,
-        "u_content_custom_ImageTool": 1,
-        "u_content_heading": 6,
-        "u_content_text": 5,
-        "u_content_custom_generic_table": 3,
-        "u_content_custom_PageBreak": 3,
-        "u_content_custom_summary_table": 6,
-        "u_content_custom_ChargeDetails": 3,
-        "u_content_custom_MergeField": 1,
-        "u_content_custom_TaxSummary": 2,
-        "u_content_custom_Transactions": 1,
-        "u_content_html": 11
-      },
-      "body": {
-        "rows": [
-          {
-            "cells": [
-              1,
-              1,
-              1
-            ],
-            "columns": [
-              {
-                "contents": [
-                  {
-                    "type": "custom",
-                    "slug": "ImageTool",
-                    "values": {
-                      "containerPadding": "10px",
-                      "_meta": {
-                        "htmlID": "u_content_custom_ImageTool_1",
-                        "htmlClassNames": "u_content_custom_ImageTool"
-                      },
-                      "selectable": true,
-                      "draggable": true,
-                      "duplicatable": true,
-                      "deletable": true,
-                      "hideable": true,
-                      "imageUpload": {
-                        "src": "https://meanoldtreelv.github.io/ringplan-invoice/assets/img/RingPlan-ZTelco96px.png",
-                        "imageData": "data:image/png;base64,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",
-                        "errMsg": ""
-                      },
-                      "autoWidth": {
-                        "autoWidth": "auto"
-                      },
-                      "align": "center",
-                      "alt": "",
-                      "link": {}
-                    }
-                  }
-                ],
-                "values": {
-                  "backgroundColor": "",
-                  "padding": "0px",
-                  "border": {},
-                  "borderRadius": "0px",
-                  "_meta": {
-                    "htmlID": "u_column_2",
-                    "htmlClassNames": "u_column"
+    "body": {
+      "rows": [
+        {
+          "cells": [
+            1
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "custom",
+                  "slug": "PageBreak",
+                  "values": {
+                    "hideGeneral": "",
+                    "containerPadding": "10px",
+                    "_meta": {
+                      "htmlID": "u_content_custom_PageBreak_12",
+                      "htmlClassNames": "u_content_custom_PageBreak"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true
                   }
                 }
-              },
-              {
-                "contents": [
-                  {
-                    "type": "html",
-                    "values": {
-                      "html": "<style>\n    \n    #u_content_custom_table{\n      word-break: break-all;\n    }\n    .u_content_custom_table.table-grid {\n      width: 100%;\n      table-layout: fixed;\n      border-collapse: collapse;\n    }\n    .u_content_custom_table.table-grid tr td,\n    .u_content_custom_table.table-grid tr th{\n      word-break: break-word;      \n    }\n    .u_content_custom_table.table-grid tr th{\n      \n    font-family:'Montserrat',sans-serif;font-size:14px;text-align:center;color:#000000;background-color:#FFFFFF;;padding-left:2px;padding-right:2px;padding-top:2px;padding-bottom:2px; text-decoration: auto; font-weight: normal; font-style: normal; border-top: 1px solid #E0E0E0; border-right: 1px solid #E0E0E0; border-left: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0;\n  \n    }\n    .u_content_custom_table.table-grid tr td{\n      \n    font-family:'Montserrat',sans-serif;font-size:12px;text-align:left;color:#000000;background-color:#FFFFFF;padding-left:2px;padding-right:2px;padding-top:2px;padding-bottom:2px; text-decoration: auto; font-weight: normal; font-style: normal; border-top: 1px solid #E0E0E0; border-right: 1px solid #E0E0E0; border-left: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0;\n  \n    }\n\n    #u_content_custom_account{\n      word-break: break-all;\n    }\n    .u_content_custom_account.table-grid {\n      width: 100%;\n      table-layout: fixed;\n      border-collapse: collapse;\n    }\n    .u_content_custom_account.table-grid tr td{\n      word-break: break-word;      \n    }\n    .u_content_custom_account.table-grid tr td{\n      \n    font-family:'Montserrat',sans-serif;font-size:12px;text-align:left;color:#000000;background-color:#FFFFFF;padding-left:2px;padding-right:2px;padding-top:2px;padding-bottom:2px; text-decoration: auto; font-weight: normal; font-style: normal; border-top: 1px solid #E0E0E0; border-right: 1px solid #E0E0E0; border-left: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0;\n  \n    }\n  \n    #u_content_custom_header{\n      word-break: break-all;\n    }\n    .u_content_custom_header.table-grid {\n      width: 100%;\n      table-layout: fixed;\n      border-collapse: collapse;\n    }\n    .u_content_custom_header.table-grid tr th{\n      word-break: break-word;      \n    }\n    .u_content_custom_header.table-grid tr th{\n      \n    width:auto;font-family:'Montserrat',sans-serif;font-size:16px;text-align:center;color:#000000;background-color:#FFFFFF;;padding-left:2px;padding-right:2px;padding-top:2px;padding-bottom:2px; text-decoration: auto; font-weight: normal; font-style: normal; border-top: 1px solid #E0E0E0; border-right: 1px solid #E0E0E0; border-left: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0;\n  \n    }\n\n</style>",
-                      "hideDesktop": false,
-                      "containerPadding": "10px",
-                      "_meta": {
-                        "htmlID": "u_content_html_8",
-                        "htmlClassNames": "u_content_html"
-                      },
-                      "selectable": true,
-                      "draggable": true,
-                      "duplicatable": true,
-                      "deletable": true,
-                      "hideable": true
-                    }
-                  },
-                  {
-                    "type": "heading",
-                    "values": {
-                      "containerPadding": "10px",
-                      "headingType": "h2",
-                      "fontFamily": {
-                        "label": "Montserrat",
-                        "value": "'Montserrat',sans-serif",
-                        "url": "https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
-                      },
-                      "fontSize": "20px",
-                      "textAlign": "center",
-                      "lineHeight": "140%",
-                      "linkStyle": {
-                        "inherit": true,
-                        "linkColor": "#0000ee",
-                        "linkHoverColor": "#0000ee",
-                        "linkUnderline": true,
-                        "linkHoverUnderline": true
-                      },
-                      "hideDesktop": false,
-                      "_meta": {
-                        "htmlID": "u_content_heading_1",
-                        "htmlClassNames": "u_content_heading"
-                      },
-                      "selectable": true,
-                      "draggable": true,
-                      "duplicatable": true,
-                      "deletable": true,
-                      "hideable": true,
-                      "text": "INVOICE"
-                    }
-                  }
-                ],
-                "values": {
-                  "backgroundColor": "",
-                  "padding": "0px",
-                  "border": {},
-                  "borderRadius": "0px",
-                  "_meta": {
-                    "htmlID": "u_column_3",
-                    "htmlClassNames": "u_column"
-                  }
-                }
-              },
-              {
-                "contents": [
-                  {
-                    "type": "text",
-                    "values": {
-                      "containerPadding": "10px",
-                      "textAlign": "right",
-                      "lineHeight": "140%",
-                      "linkStyle": {
-                        "inherit": true,
-                        "linkColor": "#0000ee",
-                        "linkHoverColor": "#0000ee",
-                        "linkUnderline": true,
-                        "linkHoverUnderline": true
-                      },
-                      "hideDesktop": false,
-                      "_meta": {
-                        "htmlID": "u_content_text_1",
-                        "htmlClassNames": "u_content_text"
-                      },
-                      "selectable": true,
-                      "draggable": true,
-                      "duplicatable": true,
-                      "deletable": true,
-                      "hideable": true,
-                      "text": "<p style=\"font-size: 14px; line-height: 140%;\"><span style=\"font-size: 8px; line-height: 11.2px;\">{{Invoice.Account.Name}}</span></p>\n<p style=\"font-size: 14px; line-height: 140%;\"><span style=\"font-size: 8px; line-height: 11.2px;\">Invoice #: {{Invoice.InvoiceNumber}}</span></p>\n<p style=\"font-size: 14px; line-height: 140%;\"><span style=\"font-size: 8px; line-height: 11.2px;\">Date: {{Invoice.InvoiceDate}}</span></p>"
-                    }
-                  }
-                ],
-                "values": {
-                  "backgroundColor": "",
-                  "padding": "0px",
-                  "border": {},
-                  "borderRadius": "0px",
-                  "_meta": {
-                    "htmlID": "u_column_4",
-                    "htmlClassNames": "u_column"
-                  }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "borderRadius": "0px",
+                "_meta": {
+                  "htmlID": "u_column_44",
+                  "htmlClassNames": "u_column"
                 }
               }
-            ],
-            "values": {
-              "displayCondition": null,
-              "columns": false,
-              "backgroundColor": "",
-              "columnsBackgroundColor": "",
-              "alignItems": "center",
-              "backgroundImage": {
-                "url": "",
-                "fullWidth": true,
-                "repeat": false,
-                "center": true,
-                "cover": false
-              },
-              "padding": "0px 15px",
-              "hideDesktop": false,
-              "_meta": {
-                "htmlID": "u_row_2",
-                "htmlClassNames": "u_row"
-              },
-              "selectable": true,
-              "draggable": true,
-              "duplicatable": true,
-              "deletable": true,
-              "hideable": true
             }
-          },
-          {
-            "cells": [
-              1
-            ],
-            "columns": [
-              {
-                "contents": [
-                  {
-                    "type": "divider",
-                    "values": {
-                      "width": "100%",
-                      "border": {
-                        "borderTopWidth": "1px",
-                        "borderTopStyle": "solid",
-                        "borderTopColor": "#BBBBBB"
-                      },
-                      "textAlign": "center",
-                      "containerPadding": "10px",
-                      "hideDesktop": false,
-                      "_meta": {
-                        "htmlID": "u_content_divider_5",
-                        "htmlClassNames": "u_content_divider"
-                      },
-                      "selectable": true,
-                      "draggable": true,
-                      "duplicatable": true,
-                      "deletable": true,
-                      "hideable": true
-                    }
-                  }
-                ],
-                "values": {
-                  "backgroundColor": "",
-                  "padding": "0px",
-                  "border": {},
-                  "borderRadius": "0px",
-                  "_meta": {
-                    "htmlID": "u_column_18",
-                    "htmlClassNames": "u_column"
-                  }
-                }
-              }
-            ],
-            "values": {
-              "displayCondition": null,
-              "columns": false,
-              "backgroundColor": "",
-              "columnsBackgroundColor": "",
-              "backgroundImage": {
-                "url": "",
-                "fullWidth": true,
-                "repeat": false,
-                "center": true,
-                "cover": false
-              },
-              "padding": "0px",
-              "hideDesktop": false,
-              "_meta": {
-                "htmlID": "u_row_12",
-                "htmlClassNames": "u_row"
-              },
-              "selectable": true,
-              "draggable": true,
-              "duplicatable": true,
-              "deletable": true,
-              "hideable": true
-            }
-          },
-          {
-            "cells": [
-              39.93,
-              6.64,
-              53.43
-            ],
-            "columns": [
-              {
-                "contents": [
-                  {
-                    "type": "heading",
-                    "values": {
-                      "containerPadding": "10px",
-                      "headingType": "h1",
-                      "fontFamily": {
-                        "label": "Arial",
-                        "value": "arial,helvetica,sans-serif"
-                      },
-                      "fontSize": "22px",
-                      "textAlign": "left",
-                      "lineHeight": "140%",
-                      "linkStyle": {
-                        "inherit": true,
-                        "linkColor": "#0000ee",
-                        "linkHoverColor": "#0000ee",
-                        "linkUnderline": true,
-                        "linkHoverUnderline": true
-                      },
-                      "hideDesktop": false,
-                      "_meta": {
-                        "htmlID": "u_content_heading_2",
-                        "htmlClassNames": "u_content_heading"
-                      },
-                      "selectable": true,
-                      "draggable": true,
-                      "duplicatable": true,
-                      "deletable": true,
-                      "hideable": true,
-                      "text": "Customer Info"
-                    }
-                  },
-                  {
-                    "type": "text",
-                    "values": {
-                      "containerPadding": "10px",
-                      "textAlign": "left",
-                      "lineHeight": "140%",
-                      "linkStyle": {
-                        "inherit": true,
-                        "linkColor": "#0000ee",
-                        "linkHoverColor": "#0000ee",
-                        "linkUnderline": true,
-                        "linkHoverUnderline": true
-                      },
-                      "hideDesktop": false,
-                      "_meta": {
-                        "htmlID": "u_content_text_5",
-                        "htmlClassNames": "u_content_text"
-                      },
-                      "selectable": true,
-                      "draggable": true,
-                      "duplicatable": true,
-                      "deletable": true,
-                      "hideable": true,
-                      "text": "<p style=\"font-size: 14px; line-height: 140%;\">{{#Invoice.Account}}</p>\n<p style=\"font-size: 14px; line-height: 140%;\"><strong><span style=\"font-size: 16px; line-height: 22.4px;\">{{Name}}</span></strong></p>\n<p style=\"font-size: 14px; line-height: 140%;\">&nbsp;</p>\n<p style=\"font-size: 14px; line-height: 140%;\"><span style=\"font-size: 16px; line-height: 22.4px;\">{{Address1__c}}</span></p>\n<p style=\"font-size: 14px; line-height: 140%;\"><span style=\"font-size: 16px; line-height: 22.4px;\">{{Address2__c}}</span></p>\n<p style=\"font-size: 14px; line-height: 140%;\"><span style=\"font-size: 16px; line-height: 22.4px;\">{{City__c}}, {{State__c}} {{Zipcode__c}}</span></p>\n<p style=\"font-size: 14px; line-height: 140%;\"><span style=\"font-size: 16px; line-height: 22.4px;\">{{/Invoice.Account}}</span></p>"
-                    }
-                  }
-                ],
-                "values": {
-                  "backgroundColor": "#ecf0f1",
-                  "padding": "5px",
-                  "border": {
-                    "borderTopWidth": "5px",
-                    "borderTopStyle": "solid",
-                    "borderTopColor": "rgba(0,0,0,0)",
-                    "borderLeftWidth": "5px",
-                    "borderLeftStyle": "solid",
-                    "borderLeftColor": "rgba(0,0,0,0)",
-                    "borderRightWidth": "5px",
-                    "borderRightStyle": "solid",
-                    "borderRightColor": "rgba(0,0,0,0)",
-                    "borderBottomWidth": "5px",
-                    "borderBottomStyle": "solid",
-                    "borderBottomColor": "rgba(0,0,0,0)"
-                  },
-                  "borderRadius": "15px",
-                  "_meta": {
-                    "htmlID": "u_column_5",
-                    "htmlClassNames": "u_column"
-                  }
-                }
-              },
-              {
-                "contents": [],
-                "values": {
-                  "backgroundColor": "",
-                  "padding": "0px",
-                  "border": {},
-                  "borderRadius": "0px",
-                  "_meta": {
-                    "htmlID": "u_column_6",
-                    "htmlClassNames": "u_column"
-                  }
-                }
-              },
-              {
-                "contents": [
-                  {
-                    "type": "heading",
-                    "values": {
-                      "containerPadding": "10px",
-                      "headingType": "h1",
-                      "fontFamily": {
-                        "label": "Arial",
-                        "value": "arial,helvetica,sans-serif"
-                      },
-                      "fontSize": "22px",
-                      "textAlign": "left",
-                      "lineHeight": "140%",
-                      "linkStyle": {
-                        "inherit": true,
-                        "linkColor": "#0000ee",
-                        "linkHoverColor": "#0000ee",
-                        "linkUnderline": true,
-                        "linkHoverUnderline": true
-                      },
-                      "hideDesktop": false,
-                      "_meta": {
-                        "htmlID": "u_content_heading_3",
-                        "htmlClassNames": "u_content_heading"
-                      },
-                      "selectable": true,
-                      "draggable": true,
-                      "duplicatable": true,
-                      "deletable": true,
-                      "hideable": true,
-                      "text": "Account Info"
-                    }
-                  },
-                  {
-                    "type": "html",
-                    "values": {
-                      "html": "{{#Invoice}}\n<table class=\"table-grid u_content_custom_account\">\n<tbody>\n    <tr><td style=\"width: 30%;\">Account #:</td><td>&nbsp;&nbsp;&nbsp;{{Account.AccountNumber}}</td></tr>\n    <tr><td>Invoice #:</td><td>&nbsp;&nbsp;&nbsp;{{Invoice.InvoiceNumber}}</td></tr>\n    <tr><td>Pincode:</td><td>&nbsp;&nbsp;&nbsp;{{Account.PinCode__c}}</td></tr>\n    <tr><td>Invoice Date:</td><td>&nbsp;&nbsp;&nbsp;{{Invoice.InvoiceDate}}</td></tr>\n    <tr><td>Terms:</td><td>&nbsp;&nbsp;&nbsp;{{Account.PaymentTerm}}</td></tr>\n    <tr><td>Invoice Amount:</td><td>&nbsp;&nbsp;&nbsp;{{Amount}}</td></tr>\n</tbody>\n</table>\n{{/Invoice}}",
-                      "hideDesktop": false,
-                      "containerPadding": "10px",
-                      "_meta": {
-                        "htmlID": "u_content_html_5",
-                        "htmlClassNames": "u_content_html"
-                      },
-                      "selectable": true,
-                      "draggable": true,
-                      "duplicatable": true,
-                      "deletable": true,
-                      "hideable": true
-                    }
-                  }
-                ],
-                "values": {
-                  "backgroundColor": "#ecf0f1",
-                  "padding": "5px",
-                  "border": {
-                    "borderTopWidth": "5px",
-                    "borderTopStyle": "solid",
-                    "borderTopColor": "rgba(0,0,0,0)",
-                    "borderLeftWidth": "5px",
-                    "borderLeftStyle": "solid",
-                    "borderLeftColor": "rgba(0,0,0,0)",
-                    "borderRightWidth": "5px",
-                    "borderRightStyle": "solid",
-                    "borderRightColor": "rgba(0,0,0,0)",
-                    "borderBottomWidth": "5px",
-                    "borderBottomStyle": "solid",
-                    "borderBottomColor": "rgba(0,0,0,0)"
-                  },
-                  "borderRadius": "15px",
-                  "_meta": {
-                    "htmlID": "u_column_7",
-                    "htmlClassNames": "u_column"
-                  }
-                }
-              }
-            ],
-            "values": {
-              "displayCondition": null,
-              "columns": false,
-              "backgroundColor": "",
-              "columnsBackgroundColor": "rgba(0,0,0,0)",
-              "backgroundImage": {
-                "url": "",
-                "fullWidth": true,
-                "repeat": false,
-                "center": true,
-                "cover": false
-              },
-              "padding": "0px 15px",
-              "hideDesktop": false,
-              "_meta": {
-                "htmlID": "u_row_3",
-                "htmlClassNames": "u_row"
-              },
-              "selectable": true,
-              "draggable": true,
-              "duplicatable": true,
-              "deletable": true,
-              "hideable": true
-            }
-          },
-          {
-            "cells": [
-              1
-            ],
-            "columns": [
-              {
-                "contents": [
-                  {
-                    "type": "divider",
-                    "values": {
-                      "width": "100%",
-                      "border": {
-                        "borderTopWidth": "1px",
-                        "borderTopStyle": "solid",
-                        "borderTopColor": "#BBBBBB"
-                      },
-                      "textAlign": "center",
-                      "containerPadding": "10px",
-                      "hideDesktop": false,
-                      "_meta": {
-                        "htmlID": "u_content_divider_6",
-                        "htmlClassNames": "u_content_divider"
-                      },
-                      "selectable": true,
-                      "draggable": true,
-                      "duplicatable": true,
-                      "deletable": true,
-                      "hideable": true
-                    }
-                  }
-                ],
-                "values": {
-                  "backgroundColor": "",
-                  "padding": "0px",
-                  "border": {},
-                  "borderRadius": "0px",
-                  "_meta": {
-                    "htmlID": "u_column_19",
-                    "htmlClassNames": "u_column"
-                  }
-                }
-              }
-            ],
-            "values": {
-              "displayCondition": null,
-              "columns": false,
-              "backgroundColor": "",
-              "columnsBackgroundColor": "",
-              "backgroundImage": {
-                "url": "",
-                "fullWidth": true,
-                "repeat": false,
-                "center": true,
-                "cover": false
-              },
-              "padding": "0px",
-              "hideDesktop": false,
-              "_meta": {
-                "htmlID": "u_row_13",
-                "htmlClassNames": "u_row"
-              },
-              "selectable": true,
-              "draggable": true,
-              "duplicatable": true,
-              "deletable": true,
-              "hideable": true
-            }
-          },
-          {
-            "cells": [
-              1
-            ],
-            "columns": [
-              {
-                "contents": [
-                  {
-                    "type": "heading",
-                    "values": {
-                      "containerPadding": "10px",
-                      "headingType": "h1",
-                      "fontFamily": {
-                        "label": "Arial",
-                        "value": "arial,helvetica,sans-serif"
-                      },
-                      "fontSize": "22px",
-                      "textAlign": "left",
-                      "lineHeight": "140%",
-                      "linkStyle": {
-                        "inherit": true,
-                        "linkColor": "#0000ee",
-                        "linkHoverColor": "#0000ee",
-                        "linkUnderline": true,
-                        "linkHoverUnderline": true
-                      },
-                      "hideDesktop": false,
-                      "_meta": {
-                        "htmlID": "u_content_heading_4",
-                        "htmlClassNames": "u_content_heading"
-                      },
-                      "selectable": true,
-                      "draggable": true,
-                      "duplicatable": true,
-                      "deletable": true,
-                      "hideable": true,
-                      "text": "Subscriptions"
-                    }
-                  },
-                  {
-                    "type": "html",
-                    "values": {
-                      "html": "\n{{#Invoice}}\n<table class=\"table-grid u_content_custom_table\">\n<thead><tr>\n    <th style=\"width:auto; \">\n        Subscription ID\n    </th>\n    <th style=\"width:20%;\">\n        Amount\n    </th></tr></thead>\n<tbody>\n  \n    {{#InvoiceItems|GroupBy(Subscription.Name)}}\n    {{Cmd_Assign(BySubscriptionName,_Group)}}\n  \n  <tr>\n    \n        <td  style=\" \">\n          {{#BySubscriptionName|Nth(1)}}\n          {{Subscription.Name}}\n          {{/BySubscriptionName|Nth(1)}}\n        </td>\n      <td style=\"text-align:right;font-family:monospace; \">\n            {{BySubscriptionName|Sum(ChargeAmount)|Round(2)|Localise}}\n          </td>\n  </tr>\n  \n    \n    {{/InvoiceItems|GroupBy(Subscription.Name)}}\n  \n</tbody>\n</table>\n{{/Invoice}}",
-                      "hideDesktop": false,
-                      "containerPadding": "10px",
-                      "_meta": {
-                        "htmlID": "u_content_html_6",
-                        "htmlClassNames": "u_content_html"
-                      },
-                      "selectable": true,
-                      "draggable": true,
-                      "duplicatable": true,
-                      "deletable": true,
-                      "hideable": true
-                    }
-                  }
-                ],
-                "values": {
-                  "backgroundColor": "#ecf0f1",
-                  "padding": "5px",
-                  "border": {
-                    "borderTopWidth": "5px",
-                    "borderTopStyle": "solid",
-                    "borderTopColor": "rgba(0,0,0,0)",
-                    "borderLeftWidth": "5px",
-                    "borderLeftStyle": "solid",
-                    "borderLeftColor": "rgba(0,0,0,0)",
-                    "borderRightWidth": "5px",
-                    "borderRightStyle": "solid",
-                    "borderRightColor": "rgba(0,0,0,0)",
-                    "borderBottomWidth": "5px",
-                    "borderBottomStyle": "solid",
-                    "borderBottomColor": "rgba(0,0,0,0)"
-                  },
-                  "borderRadius": "15px",
-                  "_meta": {
-                    "htmlID": "u_column_15",
-                    "htmlClassNames": "u_column"
-                  }
-                }
-              }
-            ],
-            "values": {
-              "displayCondition": null,
-              "columns": false,
-              "backgroundColor": "",
-              "columnsBackgroundColor": "",
-              "backgroundImage": {
-                "url": "",
-                "fullWidth": true,
-                "repeat": false,
-                "center": true,
-                "cover": false
-              },
-              "padding": "0px 15px",
-              "hideDesktop": false,
-              "_meta": {
-                "htmlID": "u_row_11",
-                "htmlClassNames": "u_row"
-              },
-              "selectable": true,
-              "draggable": true,
-              "duplicatable": true,
-              "deletable": true,
-              "hideable": true
-            }
-          },
-          {
-            "cells": [
-              1
-            ],
-            "columns": [
-              {
-                "contents": [
-                  {
-                    "type": "divider",
-                    "values": {
-                      "width": "100%",
-                      "border": {
-                        "borderTopWidth": "1px",
-                        "borderTopStyle": "solid",
-                        "borderTopColor": "#BBBBBB"
-                      },
-                      "textAlign": "center",
-                      "containerPadding": "10px",
-                      "hideDesktop": false,
-                      "_meta": {
-                        "htmlID": "u_content_divider_7",
-                        "htmlClassNames": "u_content_divider"
-                      },
-                      "selectable": true,
-                      "draggable": true,
-                      "duplicatable": true,
-                      "deletable": true,
-                      "hideable": true
-                    }
-                  }
-                ],
-                "values": {
-                  "backgroundColor": "",
-                  "padding": "0px",
-                  "border": {},
-                  "borderRadius": "0px",
-                  "_meta": {
-                    "htmlID": "u_column_20",
-                    "htmlClassNames": "u_column"
-                  }
-                }
-              }
-            ],
-            "values": {
-              "displayCondition": null,
-              "columns": false,
-              "backgroundColor": "",
-              "columnsBackgroundColor": "",
-              "backgroundImage": {
-                "url": "",
-                "fullWidth": true,
-                "repeat": false,
-                "center": true,
-                "cover": false
-              },
-              "padding": "0px",
-              "hideDesktop": false,
-              "_meta": {
-                "htmlID": "u_row_14",
-                "htmlClassNames": "u_row"
-              },
-              "selectable": true,
-              "draggable": true,
-              "duplicatable": true,
-              "deletable": true,
-              "hideable": true
-            }
-          },
-          {
-            "cells": [
-              61.07,
-              5.3,
-              33.63
-            ],
-            "columns": [
-              {
-                "contents": [
-                  {
-                    "type": "heading",
-                    "values": {
-                      "containerPadding": "10px",
-                      "headingType": "h1",
-                      "fontFamily": {
-                        "label": "Arial",
-                        "value": "arial,helvetica,sans-serif"
-                      },
-                      "fontSize": "22px",
-                      "textAlign": "left",
-                      "lineHeight": "140%",
-                      "linkStyle": {
-                        "inherit": true,
-                        "linkColor": "#0000ee",
-                        "linkHoverColor": "#0000ee",
-                        "linkUnderline": true,
-                        "linkHoverUnderline": true
-                      },
-                      "hideDesktop": false,
-                      "_meta": {
-                        "htmlID": "u_content_heading_5",
-                        "htmlClassNames": "u_content_heading"
-                      },
-                      "selectable": true,
-                      "draggable": true,
-                      "duplicatable": true,
-                      "deletable": true,
-                      "hideable": true,
-                      "text": "Tax Summary"
-                    }
-                  },
-                  {
-                    "type": "html",
-                    "values": {
-                      "html": "   \n{{#Invoice}}\n<table class=\"table-grid u_content_custom_table\">\n<thead><tr>\n    <th style=\"width:auto; \">\n        Name\n    </th>\n    <th style=\"width:25%;\">\n        Amount\n    </th></tr></thead>\n<tbody>\n  \n    {{#InvoiceItems|FlatMap(TaxationItems)|FilterByValue(TaxAmount,NE,0)|FilterByValue(Name,NOT_NULL)|SortBy(Name,ASC)|GroupBy(Name)}}\n    {{Cmd_Assign(ByName,_Group)}}\n  \n  <tr>\n    \n        <td  style=\"font-size: 8px;\">\n          {{#ByName|Nth(1)}}\n          {{Name}}\n          {{/ByName|Nth(1)}}\n        </td>\n      <td style=\"text-align:right;font-family:monospace;font-size: 8px; \">\n            ${{ByName|Sum(TaxAmount)|Round(2)|Localise}}\n          </td>\n  </tr>\n  \n    \n    {{/InvoiceItems|FlatMap(TaxationItems)|FilterByValue(TaxAmount,NE,0)|FilterByValue(Name,NOT_NULL)|SortBy(Name,ASC)|GroupBy(Name)}}\n  \n</tbody>\n</table>\n{{/Invoice}}\n",
-                      "hideDesktop": false,
-                      "containerPadding": "10px",
-                      "_meta": {
-                        "htmlID": "u_content_html_2",
-                        "htmlClassNames": "u_content_html"
-                      },
-                      "selectable": true,
-                      "draggable": true,
-                      "duplicatable": true,
-                      "deletable": true,
-                      "hideable": true
-                    }
-                  }
-                ],
-                "values": {
-                  "backgroundColor": "#ecf0f1",
-                  "padding": "5px",
-                  "border": {
-                    "borderTopWidth": "5px",
-                    "borderTopStyle": "solid",
-                    "borderTopColor": "rgba(0,0,0,0)",
-                    "borderLeftWidth": "5px",
-                    "borderLeftStyle": "solid",
-                    "borderLeftColor": "rgba(0,0,0,0)",
-                    "borderRightWidth": "5px",
-                    "borderRightStyle": "solid",
-                    "borderRightColor": "rgba(0,0,0,0)",
-                    "borderBottomWidth": "5px",
-                    "borderBottomStyle": "solid",
-                    "borderBottomColor": "rgba(0,0,0,0)"
-                  },
-                  "borderRadius": "15px",
-                  "_meta": {
-                    "htmlID": "u_column_10",
-                    "htmlClassNames": "u_column"
-                  }
-                }
-              },
-              {
-                "contents": [],
-                "values": {
-                  "backgroundColor": "",
-                  "padding": "0px",
-                  "border": {},
-                  "borderRadius": "0px",
-                  "_meta": {
-                    "htmlID": "u_column_16",
-                    "htmlClassNames": "u_column"
-                  }
-                }
-              },
-              {
-                "contents": [
-                  {
-                    "type": "heading",
-                    "values": {
-                      "containerPadding": "10px",
-                      "headingType": "h1",
-                      "fontFamily": {
-                        "label": "Arial",
-                        "value": "arial,helvetica,sans-serif"
-                      },
-                      "fontSize": "22px",
-                      "textAlign": "left",
-                      "lineHeight": "140%",
-                      "linkStyle": {
-                        "inherit": true,
-                        "linkColor": "#0000ee",
-                        "linkHoverColor": "#0000ee",
-                        "linkUnderline": true,
-                        "linkHoverUnderline": true
-                      },
-                      "hideDesktop": false,
-                      "_meta": {
-                        "htmlID": "u_content_heading_6",
-                        "htmlClassNames": "u_content_heading"
-                      },
-                      "selectable": true,
-                      "draggable": true,
-                      "duplicatable": true,
-                      "deletable": true,
-                      "hideable": true,
-                      "text": "Charge Summary"
-                    }
-                  },
-                  {
-                    "type": "html",
-                    "values": {
-                      "html": "{{#Invoice}}\n<table class=\"table-grid u_content_custom_account\">\n<tbody>\n<tr>  \n  <td  style=\" \">\n  Subscription Charges:\n  </td>\n  <td style=\"text-align:right;font-family: monospace;width:35%; \">\n  ${{AmountWithoutTax}}\n  </td>\n  </tr>\n    <tr>  \n  <td  style=\" \">\n  Taxes & Fees:\n  </td>\n  <td style=\"text-align:right;font-family: monospace; \">\n  ${{TaxAmount}}\n  </td>\n  </tr>\n  <tr>\n    <td>\n        Subtotal:\n    </td>\n    <td style=\"text-align:right;font-family: monospace; \">\n        ${{Amount}}\n    </td>\n  </tr>\n  <tr>\n  <td>\n  &nbsp;\n  </td>\n  <td>\n  &nbsp;\n  </tr>\n    <tr>  \n  <td  style=\" \">\n  Adjustments:\n  </td>\n  <td style=\"text-align:right;font-family: monospace; \">\n  ${{AdjustmentAmount}}\n  </td>\n  </tr>\n    <tr>  \n  <td  style=\" \">\n  Payments:\n  </td>\n  <td style=\"text-align:right;font-family: monospace; \">\n  ${{PaymentAmount}}\n  </td>\n  </tr>\n     <tr>\n  <td>\n  &nbsp;\n  </td>\n  <td>\n  &nbsp;\n  </tr>\n    <tr>  \n  <td  style=\" \">\n  Total Amount Due:\n  </td>\n  <td style=\"text-align:right;font-family: monospace; \">\n  ${{Balance}}\n  </td>\n  </tr>\n</tbody>\n</table>\n{{/Invoice}}",
-                      "hideDesktop": false,
-                      "containerPadding": "10px",
-                      "_meta": {
-                        "htmlID": "u_content_html_1",
-                        "htmlClassNames": "u_content_html"
-                      },
-                      "selectable": true,
-                      "draggable": true,
-                      "duplicatable": true,
-                      "deletable": true,
-                      "hideable": true
-                    }
-                  }
-                ],
-                "values": {
-                  "backgroundColor": "#ecf0f1",
-                  "padding": "5px",
-                  "border": {
-                    "borderTopWidth": "5px",
-                    "borderTopStyle": "solid",
-                    "borderTopColor": "rgba(0,0,0,0)",
-                    "borderLeftWidth": "5px",
-                    "borderLeftStyle": "solid",
-                    "borderLeftColor": "rgba(0,0,0,0)",
-                    "borderRightWidth": "5px",
-                    "borderRightStyle": "solid",
-                    "borderRightColor": "rgba(0,0,0,0)",
-                    "borderBottomWidth": "5px",
-                    "borderBottomStyle": "solid",
-                    "borderBottomColor": "rgba(0,0,0,0)"
-                  },
-                  "borderRadius": "15px",
-                  "_meta": {
-                    "htmlID": "u_column_17",
-                    "htmlClassNames": "u_column"
-                  }
-                }
-              }
-            ],
-            "values": {
-              "displayCondition": null,
-              "columns": false,
-              "backgroundColor": "",
-              "columnsBackgroundColor": "",
-              "backgroundImage": {
-                "url": "",
-                "fullWidth": true,
-                "repeat": false,
-                "center": true,
-                "cover": false
-              },
-              "padding": "0px 15px",
-              "hideDesktop": false,
-              "_meta": {
-                "htmlID": "u_row_6",
-                "htmlClassNames": "u_row"
-              },
-              "selectable": true,
-              "draggable": true,
-              "duplicatable": true,
-              "deletable": true,
-              "hideable": true
-            }
-          },
-          {
-            "cells": [
-              1
-            ],
-            "columns": [
-              {
-                "contents": [
-                  {
-                    "type": "custom",
-                    "slug": "PageBreak",
-                    "values": {
-                      "containerPadding": "10px",
-                      "_meta": {
-                        "htmlID": "u_content_custom_PageBreak_3",
-                        "htmlClassNames": "u_content_custom_PageBreak"
-                      },
-                      "selectable": true,
-                      "draggable": true,
-                      "duplicatable": true,
-                      "deletable": true,
-                      "hideable": true,
-                      "hideGeneral": ""
-                    }
-                  }
-                ],
-                "values": {
-                  "backgroundColor": "",
-                  "padding": "0px",
-                  "border": {},
-                  "borderRadius": "0px",
-                  "_meta": {
-                    "htmlID": "u_column_22",
-                    "htmlClassNames": "u_column"
-                  }
-                }
-              }
-            ],
-            "values": {
-              "displayCondition": null,
-              "columns": false,
-              "backgroundColor": "",
-              "columnsBackgroundColor": "",
-              "backgroundImage": {
-                "url": "",
-                "fullWidth": true,
-                "repeat": false,
-                "center": true,
-                "cover": false
-              },
-              "padding": "0px",
-              "hideDesktop": false,
-              "_meta": {
-                "htmlID": "u_row_16",
-                "htmlClassNames": "u_row"
-              },
-              "selectable": true,
-              "draggable": true,
-              "duplicatable": true,
-              "deletable": true,
-              "hideable": true
-            }
-          },
-          {
-            "cells": [
-              1
-            ],
-            "columns": [
-              {
-                "contents": [
-                  {
-                    "type": "html",
-                    "values": {
-                      "html": "{{#Invoice}}\n<table class=\"table-grid u_content_custom_header\">\n<thead>\n<tr>\n    <th>\n        {{Account.Name}}\n    </th>\n    <th>\n        {{InvoiceNumber}}\n    </th>\n    <th>\n        {{InvoiceDate}}\n    </th>\n</tr>\n</thead>\n{{/Invoice}}",
-                      "hideDesktop": false,
-                      "containerPadding": "10px",
-                      "_meta": {
-                        "htmlID": "u_content_html_10",
-                        "htmlClassNames": "u_content_html"
-                      },
-                      "selectable": true,
-                      "draggable": true,
-                      "duplicatable": true,
-                      "deletable": true,
-                      "hideable": true
-                    }
-                  }
-                ],
-                "values": {
-                  "backgroundColor": "#ecf0f1",
-                  "padding": "5px",
-                  "border": {
-                    "borderTopWidth": "5px",
-                    "borderTopStyle": "solid",
-                    "borderTopColor": "rgba(0,0,0,0)",
-                    "borderLeftWidth": "5px",
-                    "borderLeftStyle": "solid",
-                    "borderLeftColor": "rgba(0,0,0,0)",
-                    "borderRightWidth": "5px",
-                    "borderRightStyle": "solid",
-                    "borderRightColor": "rgba(0,0,0,0)",
-                    "borderBottomWidth": "5px",
-                    "borderBottomStyle": "solid",
-                    "borderBottomColor": "rgba(0,0,0,0)"
-                  },
-                  "borderRadius": "15px",
-                  "_meta": {
-                    "htmlID": "u_column_29",
-                    "htmlClassNames": "u_column"
-                  }
-                }
-              }
-            ],
-            "values": {
-              "displayCondition": null,
-              "columns": false,
-              "backgroundColor": "",
-              "columnsBackgroundColor": "",
-              "backgroundImage": {
-                "url": "",
-                "fullWidth": true,
-                "repeat": false,
-                "center": true,
-                "cover": false
-              },
-              "padding": "15px",
-              "hideDesktop": false,
-              "_meta": {
-                "htmlID": "u_row_19",
-                "htmlClassNames": "u_row"
-              },
-              "selectable": true,
-              "draggable": true,
-              "duplicatable": true,
-              "deletable": true,
-              "hideable": true
-            }
-          },
-          {
-            "cells": [
-              1
-            ],
-            "columns": [
-              {
-                "contents": [
-                  {
-                    "type": "divider",
-                    "values": {
-                      "width": "100%",
-                      "border": {
-                        "borderTopWidth": "1px",
-                        "borderTopStyle": "solid",
-                        "borderTopColor": "#BBBBBB"
-                      },
-                      "textAlign": "center",
-                      "containerPadding": "10px",
-                      "_meta": {
-                        "htmlID": "u_content_divider_8",
-                        "htmlClassNames": "u_content_divider"
-                      },
-                      "selectable": true,
-                      "draggable": true,
-                      "duplicatable": true,
-                      "deletable": true,
-                      "hideable": true
-                    }
-                  }
-                ],
-                "values": {
-                  "backgroundColor": "",
-                  "padding": "0px",
-                  "border": {},
-                  "borderRadius": "0px",
-                  "_meta": {
-                    "htmlID": "u_column_31",
-                    "htmlClassNames": "u_column"
-                  }
-                }
-              }
-            ],
-            "values": {
-              "displayCondition": null,
-              "columns": false,
-              "backgroundColor": "",
-              "columnsBackgroundColor": "",
-              "backgroundImage": {
-                "url": "",
-                "fullWidth": true,
-                "repeat": false,
-                "center": true,
-                "cover": false
-              },
-              "padding": "0px",
-              "_meta": {
-                "htmlID": "u_row_21",
-                "htmlClassNames": "u_row"
-              },
-              "selectable": true,
-              "draggable": true,
-              "duplicatable": true,
-              "deletable": true,
-              "hideable": true
-            }
-          },
-          {
-            "cells": [
-              1
-            ],
-            "columns": [
-              {
-                "contents": [
-                  {
-                    "type": "html",
-                    "values": {
-                      "html": "{{#Invoice}}\n<table class=\"table-grid u_content_custom_table\">\n<thead><tr>\n  <th style=\"width:10%; \">\n      Sub ID\n  </th>\n  <th style=\"width:10%; \">\n      Change ID\n  </th>\n  <th style=\"width:15%; \">\n      Service Period\n  </th>\n  <th style=\"width:auto; \">\n      Item\n  </th>\n  <th style=\"width:10%; \">\n      QTY\n  </th>\n  <th style=\"width:10%; \">\n      Price\n  </th>\n  <th style=\"width:12%; \">\n      Subtotal\n  </th></tr></thead>\n<tbody>\n\n  {{#InvoiceItems|FilterByValue(ChargeAmount,NE,0)|FilterByValue(Quantity,NE,0)|SortBy(Subscription.Name,ASC,AmendmentId,ASC,ChargeAmount,ASC)|GroupBy(Subscription.Name)}}\n  {{Cmd_Assign(BySubscriptionName,_Group)}}{{#BySubscriptionName}}\n  \n  \n\n<tr>\n  \n    {{^Subscription.Name|EqualToVar(BySubscriptionNameKey)}}\n      <td rowspan=\"{{BySubscriptionName|Size}}\" style=\" \">\n        {{Subscription.Name|Substr(8,13)}\n      </td>\n    {{/Subscription.Name|EqualToVar(BySubscriptionNameKey)}}  \n    <td style=\" \">{{AmendmentId|Substr(26,32)}}</td>\n    <td style=\" \">{{ServiceStartDate|Localise}}<br>{{ServiceEndDate|Localise}}</td>\n    <td style=\" \">{{ChargeName}}</td>\n    <td style=\" \">{{Quantity}}</td>\n    <td style=\" \">{{UnitPrice}}</td>\n    <td style=\" \">{{ChargeAmount}}</td>\n</tr>\n\n  \n  \n  {{/BySubscriptionName}}\n  {{/InvoiceItems|FilterByValue(ChargeAmount,NE,0)|FilterByValue(Quantity,NE,0)|SortBy(Subscription.Name,ASC,AmendmentId,ASC,ChargeAmount,ASC)|GroupBy(Subscription.Name)}}\n\n</tbody>\n</table>\n{{/Invoice}}\n\nBegin Autogenerated Table",
-                      "containerPadding": "10px",
-                      "_meta": {
-                        "htmlID": "u_content_html_11",
-                        "htmlClassNames": "u_content_html"
-                      },
-                      "selectable": true,
-                      "draggable": true,
-                      "duplicatable": true,
-                      "deletable": true,
-                      "hideable": true
-                    }
-                  }
-                ],
-                "values": {
-                  "backgroundColor": "#ecf0f1",
-                  "padding": "5px",
-                  "border": {
-                    "borderTopWidth": "5px",
-                    "borderTopStyle": "solid",
-                    "borderTopColor": "rgba(0,0,0,0)",
-                    "borderLeftWidth": "5px",
-                    "borderLeftStyle": "solid",
-                    "borderLeftColor": "rgba(0,0,0,0)",
-                    "borderRightWidth": "5px",
-                    "borderRightStyle": "solid",
-                    "borderRightColor": "rgba(0,0,0,0)",
-                    "borderBottomWidth": "5px",
-                    "borderBottomStyle": "solid",
-                    "borderBottomColor": "rgba(0,0,0,0)"
-                  },
-                  "borderRadius": "15px",
-                  "_meta": {
-                    "htmlID": "u_column_30",
-                    "htmlClassNames": "u_column"
-                  }
-                }
-              }
-            ],
-            "values": {
-              "displayCondition": null,
-              "columns": false,
-              "backgroundColor": "",
-              "columnsBackgroundColor": "",
-              "backgroundImage": {
-                "url": "",
-                "fullWidth": true,
-                "repeat": false,
-                "center": true,
-                "cover": false
-              },
-              "padding": "15px",
-              "hideDesktop": false,
-              "_meta": {
-                "htmlID": "u_row_20",
-                "htmlClassNames": "u_row"
-              },
-              "selectable": true,
-              "draggable": true,
-              "duplicatable": true,
-              "deletable": true,
-              "hideable": true
-            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "",
+            "columnsBackgroundColor": "",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "0px",
+            "_meta": {
+              "htmlID": "u_row_33",
+              "htmlClassNames": "u_row"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
           }
-        ],
-        "values": {
-          "textColor": "#000000",
-          "backgroundColor": "#ced4d9",
-          "backgroundImage": {
-            "url": "",
-            "fullWidth": true,
-            "repeat": false,
-            "center": true,
-            "cover": false
-          },
-          "contentWidth": "1000px",
-          "contentAlign": "center",
-          "fontFamily": {
-            "label": "Montserrat",
-            "value": "'Montserrat',sans-serif",
-            "url": "https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
-          },
-          "linkStyle": {
-            "body": true,
-            "linkColor": "#0000ee",
-            "linkHoverColor": "#0000ee",
-            "linkUnderline": true,
-            "linkHoverUnderline": true
-          },
-          "_meta": {
-            "htmlID": "u_body",
-            "htmlClassNames": "u_body"
+        },
+        {
+          "cells": [
+            33.33,
+            15.81,
+            50.86
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "custom",
+                  "slug": "ImageTool",
+                  "values": {
+                    "containerPadding": "10px",
+                    "_meta": {
+                      "htmlID": "u_content_custom_ImageTool_1",
+                      "htmlClassNames": "u_content_custom_ImageTool"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "imageUpload": {
+                      "src": "https://meanoldtreelv.github.io/ringplan-invoice/assets/img/RingPlan-ZTelco96px.png",
+                      "imageData": "data:image/png;base64,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",
+                      "errMsg": ""
+                    },
+                    "autoWidth": {
+                      "autoWidth": "auto"
+                    },
+                    "align": "center",
+                    "alt": "",
+                    "link": {}
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "borderRadius": "0px",
+                "_meta": {
+                  "htmlID": "u_column_2",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            },
+            {
+              "contents": [
+                {
+                  "type": "html",
+                  "values": {
+                    "html": "<style>\n    \n    #u_content_custom_table{\n      word-break: break-all;\n    }\n    .u_content_custom_table.table-grid {\n      width: 100%;\n      table-layout: fixed;\n      border-collapse: collapse;\n    }\n    .u_content_custom_table.table-grid tr td,\n    .u_content_custom_table.table-grid tr th{\n      word-break: break-word;      \n    }\n    .u_content_custom_table.table-grid tr th{\n      \n    font-family:'Montserrat',sans-serif;font-size:14px;text-align:center;color:#000000;background-color:#FFFFFF;;padding-left:2px;padding-right:2px;padding-top:2px;padding-bottom:2px; text-decoration: auto; font-weight: normal; font-style: normal; border-top: 1px solid #E0E0E0; border-right: 1px solid #E0E0E0; border-left: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0;\n  \n    }\n    .u_content_custom_table.table-grid tr td{\n      \n    font-family:'Montserrat',sans-serif;font-size:12px;text-align:left;color:#000000;background-color:#FFFFFF;padding-left:2px;padding-right:2px;padding-top:2px;padding-bottom:2px; text-decoration: auto; font-weight: normal; font-style: normal; border-top: 1px solid #E0E0E0; border-right: 1px solid #E0E0E0; border-left: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0;\n  \n    }\n\n    #u_content_custom_account{\n      word-break: break-all;\n    }\n    .u_content_custom_account.table-grid {\n      width: 100%;\n      table-layout: fixed;\n      border-collapse: collapse;\n    }\n    .u_content_custom_account.table-grid tr td{\n      word-break: break-word;      \n    }\n    .u_content_custom_account.table-grid tr td{\n      \n    font-family:'Montserrat',sans-serif;font-size:12px;text-align:left;color:#000000;background-color:#FFFFFF;padding-left:2px;padding-right:2px;padding-top:2px;padding-bottom:2px; text-decoration: auto; font-weight: normal; font-style: normal; border-top: 1px solid #E0E0E0; border-right: 1px solid #E0E0E0; border-left: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0;\n  \n    }\n  \n    #u_content_custom_header{\n      word-break: break-all;\n    }\n    .u_content_custom_header.table-grid {\n      width: 100%;\n      table-layout: fixed;\n      border-collapse: collapse;\n    }\n    .u_content_custom_header.table-grid tr th{\n      word-break: break-word;      \n    }\n    .u_content_custom_header.table-grid tr th{\n      \n    width:auto;font-family:'Montserrat',sans-serif;font-size:16px;text-align:center;color:#000000;background-color:#FFFFFF;;padding-left:2px;padding-right:2px;padding-top:2px;padding-bottom:2px; text-decoration: auto; font-weight: normal; font-style: normal; border-top: 1px solid #E0E0E0; border-right: 1px solid #E0E0E0; border-left: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0;\n  \n    }\n\n</style>",
+                    "hideDesktop": false,
+                    "containerPadding": "10px",
+                    "_meta": {
+                      "htmlID": "u_content_html_8",
+                      "htmlClassNames": "u_content_html"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "borderRadius": "0px",
+                "_meta": {
+                  "htmlID": "u_column_3",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            },
+            {
+              "contents": [
+                {
+                  "type": "html",
+                  "values": {
+                    "html": "{{#Invoice}}\n<table class=\"table-grid u_content_custom_account\">\n<tbody>\n    <tr><td style=\"width: 30%;\">Account #:</td><td>&nbsp;&nbsp;&nbsp;{{Account.AccountNumber}}</td></tr>\n    <tr><td>Invoice #:</td><td>&nbsp;&nbsp;&nbsp;{{Invoice.InvoiceNumber}}</td></tr>\n    <tr><td>Pincode:</td><td>&nbsp;&nbsp;&nbsp;{{Account.PinCode__c}}</td></tr>\n    <tr><td>Invoice Date:</td><td>&nbsp;&nbsp;&nbsp;{{Invoice.InvoiceDate}}</td></tr>\n    <tr><td>Terms:</td><td>&nbsp;&nbsp;&nbsp;{{Account.PaymentTerm}}</td></tr>\n    <tr><td>Invoice Amount:</td><td>&nbsp;&nbsp;&nbsp;{{Amount}}</td></tr>\n</tbody>\n</table>\n{{/Invoice}}",
+                    "hideDesktop": false,
+                    "containerPadding": "10px",
+                    "_meta": {
+                      "htmlID": "u_content_html_13",
+                      "htmlClassNames": "u_content_html"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "borderRadius": "0px",
+                "_meta": {
+                  "htmlID": "u_column_4",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "",
+            "columnsBackgroundColor": "",
+            "alignItems": "center",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "0px 15px",
+            "hideDesktop": false,
+            "_meta": {
+              "htmlID": "u_row_2",
+              "htmlClassNames": "u_row"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
+          }
+        },
+        {
+          "cells": [
+            1
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "divider",
+                  "values": {
+                    "width": "100%",
+                    "border": {
+                      "borderTopWidth": "1px",
+                      "borderTopStyle": "solid",
+                      "borderTopColor": "#BBBBBB"
+                    },
+                    "textAlign": "center",
+                    "containerPadding": "10px",
+                    "hideDesktop": false,
+                    "_meta": {
+                      "htmlID": "u_content_divider_5",
+                      "htmlClassNames": "u_content_divider"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "borderRadius": "0px",
+                "_meta": {
+                  "htmlID": "u_column_18",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "",
+            "columnsBackgroundColor": "",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "0px",
+            "hideDesktop": false,
+            "_meta": {
+              "htmlID": "u_row_12",
+              "htmlClassNames": "u_row"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
+          }
+        },
+        {
+          "cells": [
+            59.21,
+            12.22,
+            28.57
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "heading",
+                  "values": {
+                    "containerPadding": "0px 0px 0px 10px",
+                    "headingType": "h1",
+                    "fontFamily": {
+                      "label": "Arial",
+                      "value": "arial,helvetica,sans-serif"
+                    },
+                    "fontSize": "22px",
+                    "textAlign": "left",
+                    "lineHeight": "140%",
+                    "linkStyle": {
+                      "inherit": true,
+                      "linkColor": "#0000ee",
+                      "linkHoverColor": "#0000ee",
+                      "linkUnderline": true,
+                      "linkHoverUnderline": true
+                    },
+                    "hideDesktop": false,
+                    "_meta": {
+                      "htmlID": "u_content_heading_2",
+                      "htmlClassNames": "u_content_heading"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "text": "Customer Info"
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "#ecf0f1",
+                "padding": "5px",
+                "border": {
+                  "borderTopWidth": "5px",
+                  "borderTopStyle": "solid",
+                  "borderTopColor": "rgba(0,0,0,0)",
+                  "borderLeftWidth": "5px",
+                  "borderLeftStyle": "solid",
+                  "borderLeftColor": "rgba(0,0,0,0)",
+                  "borderRightWidth": "5px",
+                  "borderRightStyle": "solid",
+                  "borderRightColor": "rgba(0,0,0,0)",
+                  "borderBottomWidth": "5px",
+                  "borderBottomStyle": "solid",
+                  "borderBottomColor": "rgba(0,0,0,0)"
+                },
+                "borderRadius": "15px",
+                "_meta": {
+                  "htmlID": "u_column_5",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            },
+            {
+              "contents": [],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "borderRadius": "0px",
+                "_meta": {
+                  "htmlID": "u_column_6",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            },
+            {
+              "contents": [],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "borderRadius": "0px",
+                "_meta": {
+                  "htmlID": "u_column_41",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "",
+            "columnsBackgroundColor": "rgba(0,0,0,0)",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "0px 15px",
+            "hideDesktop": false,
+            "_meta": {
+              "htmlID": "u_row_3",
+              "htmlClassNames": "u_row"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
+          }
+        },
+        {
+          "cells": [
+            1
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "divider",
+                  "values": {
+                    "width": "100%",
+                    "border": {
+                      "borderTopWidth": "1px",
+                      "borderTopStyle": "solid",
+                      "borderTopColor": "#BBBBBB"
+                    },
+                    "textAlign": "center",
+                    "containerPadding": "10px",
+                    "hideDesktop": false,
+                    "_meta": {
+                      "htmlID": "u_content_divider_6",
+                      "htmlClassNames": "u_content_divider"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "borderRadius": "0px",
+                "_meta": {
+                  "htmlID": "u_column_19",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "",
+            "columnsBackgroundColor": "",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "0px",
+            "hideDesktop": false,
+            "_meta": {
+              "htmlID": "u_row_13",
+              "htmlClassNames": "u_row"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
+          }
+        },
+        {
+          "cells": [
+            1
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "text",
+                  "values": {
+                    "containerPadding": "10px",
+                    "textAlign": "left",
+                    "lineHeight": "140%",
+                    "linkStyle": {
+                      "inherit": true,
+                      "linkColor": "#0000ee",
+                      "linkHoverColor": "#0000ee",
+                      "linkUnderline": true,
+                      "linkHoverUnderline": true
+                    },
+                    "hideDesktop": false,
+                    "_meta": {
+                      "htmlID": "u_content_text_6",
+                      "htmlClassNames": "u_content_text"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "text": "<p style=\"font-size: 14px; line-height: 140%;\">Service Address</p>\n<p style=\"font-size: 14px; line-height: 140%;\">--Service address--</p>\n<p style=\"font-size: 14px; line-height: 140%;\">&nbsp;</p>\n<p style=\"font-size: 14px; line-height: 140%;\">One Time Charges</p>\n<p style=\"font-size: 14px; line-height: 140%;\">&nbsp;</p>\n<p style=\"font-size: 14px; line-height: 140%;\">Recurring Charges</p>\n<p style=\"font-size: 14px; line-height: 140%;\">&nbsp;</p>\n<p style=\"font-size: 14px; line-height: 140%;\">Usage Charges</p>\n<p style=\"font-size: 14px; line-height: 140%;\">&nbsp;</p>\n<p style=\"font-size: 14px; line-height: 140%;\">Pro-Rated Charges and Credits</p>\n<p style=\"font-size: 14px; line-height: 140%;\">&nbsp;</p>\n<p style=\"font-size: 14px; line-height: 140%;\">Charges Subtotal</p>\n<p style=\"font-size: 14px; line-height: 140%;\">&nbsp;</p>\n<p style=\"font-size: 14px; line-height: 140%;\">Taxes, Surcharges, &amp; Fees</p>\n<p style=\"font-size: 14px; line-height: 140%;\">&nbsp;</p>\n<p style=\"font-size: 14px; line-height: 140%;\">Adjustments &amp; Credits</p>\n<p style=\"font-size: 14px; line-height: 140%;\">&nbsp;</p>\n<p style=\"font-size: 14px; line-height: 140%;\">Invoice Amount</p>\n<p style=\"font-size: 14px; line-height: 140%;\">&nbsp;</p>\n<p style=\"font-size: 14px; line-height: 140%;\">Payments</p>\n<p style=\"font-size: 14px; line-height: 140%;\">&nbsp;</p>\n<p style=\"font-size: 14px; line-height: 140%;\">Total Amount Due:</p>"
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "#ecf0f1",
+                "padding": "5px",
+                "border": {
+                  "borderTopWidth": "5px",
+                  "borderTopStyle": "solid",
+                  "borderTopColor": "rgba(0,0,0,0)",
+                  "borderLeftWidth": "5px",
+                  "borderLeftStyle": "solid",
+                  "borderLeftColor": "rgba(0,0,0,0)",
+                  "borderRightWidth": "5px",
+                  "borderRightStyle": "solid",
+                  "borderRightColor": "rgba(0,0,0,0)",
+                  "borderBottomWidth": "5px",
+                  "borderBottomStyle": "solid",
+                  "borderBottomColor": "rgba(0,0,0,0)"
+                },
+                "borderRadius": "15px",
+                "_meta": {
+                  "htmlID": "u_column_15",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "",
+            "columnsBackgroundColor": "",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "0px 15px",
+            "hideDesktop": false,
+            "_meta": {
+              "htmlID": "u_row_11",
+              "htmlClassNames": "u_row"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
+          }
+        },
+        {
+          "cells": [
+            1
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "divider",
+                  "values": {
+                    "width": "100%",
+                    "border": {
+                      "borderTopWidth": "1px",
+                      "borderTopStyle": "solid",
+                      "borderTopColor": "#BBBBBB"
+                    },
+                    "textAlign": "center",
+                    "containerPadding": "10px",
+                    "hideDesktop": false,
+                    "_meta": {
+                      "htmlID": "u_content_divider_7",
+                      "htmlClassNames": "u_content_divider"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "borderRadius": "0px",
+                "_meta": {
+                  "htmlID": "u_column_20",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "",
+            "columnsBackgroundColor": "",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "0px",
+            "hideDesktop": false,
+            "_meta": {
+              "htmlID": "u_row_14",
+              "htmlClassNames": "u_row"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
+          }
+        },
+        {
+          "cells": [
+            1
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "text",
+                  "values": {
+                    "containerPadding": "10px",
+                    "textAlign": "left",
+                    "lineHeight": "140%",
+                    "linkStyle": {
+                      "inherit": true,
+                      "linkColor": "#0000ee",
+                      "linkHoverColor": "#0000ee",
+                      "linkUnderline": true,
+                      "linkHoverUnderline": true
+                    },
+                    "hideDesktop": false,
+                    "_meta": {
+                      "htmlID": "u_content_text_7",
+                      "htmlClassNames": "u_content_text"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "text": "<p style=\"font-size: 14px; line-height: 140%;\">Payonline / Contact Us</p>"
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "#ecf0f1",
+                "padding": "5px",
+                "border": {
+                  "borderTopWidth": "5px",
+                  "borderTopStyle": "solid",
+                  "borderTopColor": "rgba(0,0,0,0)",
+                  "borderLeftWidth": "5px",
+                  "borderLeftStyle": "solid",
+                  "borderLeftColor": "rgba(0,0,0,0)",
+                  "borderRightWidth": "5px",
+                  "borderRightStyle": "solid",
+                  "borderRightColor": "rgba(0,0,0,0)",
+                  "borderBottomWidth": "5px",
+                  "borderBottomStyle": "solid",
+                  "borderBottomColor": "rgba(0,0,0,0)"
+                },
+                "borderRadius": "15px",
+                "_meta": {
+                  "htmlID": "u_column_42",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "",
+            "columnsBackgroundColor": "",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "15px",
+            "hideDesktop": false,
+            "_meta": {
+              "htmlID": "u_row_31",
+              "htmlClassNames": "u_row"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
+          }
+        },
+        {
+          "cells": [
+            1
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "custom",
+                  "slug": "PageBreak",
+                  "values": {
+                    "containerPadding": "10px",
+                    "_meta": {
+                      "htmlID": "u_content_custom_PageBreak_3",
+                      "htmlClassNames": "u_content_custom_PageBreak"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "hideGeneral": ""
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "borderRadius": "0px",
+                "_meta": {
+                  "htmlID": "u_column_22",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "",
+            "columnsBackgroundColor": "",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "0px",
+            "hideDesktop": false,
+            "_meta": {
+              "htmlID": "u_row_16",
+              "htmlClassNames": "u_row"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
+          }
+        },
+        {
+          "cells": [
+            1
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "html",
+                  "values": {
+                    "html": "<div>\n<h2>REQUIRED DISCLOSURES</h2>\n                <h3>Disputes</h3>\n                <p>If you believe there is an error on your bill or have a question about your service, please call Ringplan's customer support at (833) 746-4752.\n                </p>\n<br>\n                <p>\n                If you are not satisfied with Ringplan's response, submit a complaint to the California Public utilities Commission (CPUC) by visiting <a href='http://www.cpuc.ca.gov/complaints/'>http://www.cpuc.ca.gov/complaints/</a>. Billing and service complaints are handled by the CPUC’s Consumer Affairs Branch (CAB), which can be reached by the following means if you prefer not to submit your complaint online:\n                </p>\n                \n                <h4>Telephone</h4>\n<p>\n                1-800-649-7570 (8:30 AM to 4:30 PM, Monday through Friday)\n</p>\n                <h4>Mail</h4>\n<p>\n                California Public Utilities Commission, Consumer Affairs Branch,<br>\n                505 Van Ness Avenue, Room 2003, San Francisco, CA 94102\n</p>\n<br>\n<p style=\"font-size:12px\"><em>\n                To avoid having service turned off while you wait for the outcome of a complaint to the CPUC specifically regarding the accuracy of your bill, please contact CAB for assistance. If your case meets the eligibility criteria, CAB will provide you with instructions on how to mail a check or money order to be impounded pending resolution of your case. You must continue to pay your current charges while your complaint is under review to keep your service turned on.\n  </em></p>\n  <h2>Relay Services</h2>\n                <p>\n                If you have limitations hearing or speaking, dial 711 to reach the California Relay Service, which is for those needing direct assistance relaying telephone conversations, as well their friends, family, and business contacts. If you prefer having your calls immediately answered in your mode of communication, dial one of the toll-free language-specific numbers below to be routed to the California Relay Service provider.\n                </p>\n                <br>\n                <table width=\"70%\">\n                    <tr style=\"text-align:left;\"><th>Type of Call</th><th>Language</th><th>Toll-free Number</th></tr>\n                    <tr><td>TTY/VCO/HCO to Voice</td><td>English</td><td>1-800-735-2929</td></tr>\n                    <tr><td>&nbsp;</td><td>Spanish</td><td>1-800-855-3000</td></tr>\n                    <tr><td>Voice to TTY/VCO/HCO</td><td>English</td><td>1-800-735-2929</td></tr>\n                    <tr><td>&nbsp;</td><td>Spanish</td><td>1-800-855-3000</td></tr>\n                    <tr><td>From or to Speech-to-Speech</td><td>English</td><td>1-800-854-7784</td></tr>\n                    <tr><td>&nbsp;</td><td>Spanish</td><td>1-800-854-7784</td></tr>\n                </table>\n</div>",
+                    "hideDesktop": false,
+                    "containerPadding": "0px",
+                    "_meta": {
+                      "htmlID": "u_content_html_12",
+                      "htmlClassNames": "u_content_html"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "#ecf0f1",
+                "padding": "5px",
+                "border": {
+                  "borderTopWidth": "5px",
+                  "borderTopStyle": "solid",
+                  "borderTopColor": "rgba(0,0,0,0)",
+                  "borderLeftWidth": "5px",
+                  "borderLeftStyle": "solid",
+                  "borderLeftColor": "rgba(0,0,0,0)",
+                  "borderRightWidth": "5px",
+                  "borderRightStyle": "solid",
+                  "borderRightColor": "rgba(0,0,0,0)",
+                  "borderBottomWidth": "5px",
+                  "borderBottomStyle": "solid",
+                  "borderBottomColor": "rgba(0,0,0,0)"
+                },
+                "borderRadius": "15px",
+                "_meta": {
+                  "htmlID": "u_column_36",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "",
+            "columnsBackgroundColor": "",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "15px",
+            "hideDesktop": false,
+            "_meta": {
+              "htmlID": "u_row_26",
+              "htmlClassNames": "u_row"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
+          }
+        },
+        {
+          "cells": [
+            1
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "custom",
+                  "slug": "PageBreak",
+                  "values": {
+                    "containerPadding": "10px",
+                    "_meta": {
+                      "htmlID": "u_content_custom_PageBreak_11",
+                      "htmlClassNames": "u_content_custom_PageBreak"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "hideGeneral": ""
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "borderRadius": "0px",
+                "_meta": {
+                  "htmlID": "u_column_40",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "",
+            "columnsBackgroundColor": "",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "0px",
+            "hideDesktop": false,
+            "_meta": {
+              "htmlID": "u_row_30",
+              "htmlClassNames": "u_row"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
+          }
+        },
+        {
+          "cells": [
+            1
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "heading",
+                  "values": {
+                    "containerPadding": "10px",
+                    "headingType": "h1",
+                    "fontFamily": {
+                      "label": "Arial",
+                      "value": "arial,helvetica,sans-serif"
+                    },
+                    "fontSize": "22px",
+                    "textAlign": "left",
+                    "lineHeight": "140%",
+                    "linkStyle": {
+                      "inherit": true,
+                      "linkColor": "#0000ee",
+                      "linkHoverColor": "#0000ee",
+                      "linkUnderline": true,
+                      "linkHoverUnderline": true
+                    },
+                    "hideDesktop": false,
+                    "_meta": {
+                      "htmlID": "u_content_heading_12",
+                      "htmlClassNames": "u_content_heading"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "text": "One-Time Charges"
+                  }
+                },
+                {
+                  "type": "custom",
+                  "slug": "generic_table",
+                  "values": {
+                    "containerPadding": "10px",
+                    "_meta": {
+                      "htmlID": "u_content_custom_generic_table_7",
+                      "htmlClassNames": "u_content_custom_generic_table"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "tableMeta": {
+                      "options": [],
+                      "objects": [],
+                      "objectTypes": [],
+                      "selectedObject": {},
+                      "secondSelectedObject": {},
+                      "selectedColumns": [],
+                      "advFieldName": false,
+                      "filterBy": [],
+                      "sortBy": [],
+                      "groupBy": []
+                    },
+                    "headerFontFamily": {
+                      "label": "Arial",
+                      "value": "arial,helvetica,sans-serif"
+                    },
+                    "headerFontSize": "14",
+                    "headerBIU": {
+                      "textLabel": "Formatting",
+                      "textBold": false,
+                      "textItalic": false,
+                      "textUnderline": false
+                    },
+                    "headerAlign": "center",
+                    "headerTextColor": "#464C51",
+                    "headerBgColor": "#F6F7F8",
+                    "bodyFontFamily": {
+                      "label": "Arial",
+                      "value": "arial,helvetica,sans-serif"
+                    },
+                    "bodyFontSize": "14",
+                    "bodyBIU": {
+                      "textLabel": "Formatting",
+                      "textBold": false,
+                      "textItalic": false,
+                      "textUnderline": false
+                    },
+                    "bodyAlign": "left",
+                    "bodyTextColor": "#000000",
+                    "bodyBgColor": "#FFFFFF",
+                    "tableHeaderPadding": {
+                      "label": "Table Header",
+                      "paddingTop": 12,
+                      "paddingBottom": 12,
+                      "paddingRight": 12,
+                      "paddingLeft": 12
+                    },
+                    "tableBodyPadding": {
+                      "label": "Table Body",
+                      "paddingTop": 12,
+                      "paddingBottom": 12,
+                      "paddingRight": 12,
+                      "paddingLeft": 12
+                    },
+                    "tableHeaderBorder": {
+                      "borderTopWidth": "1px",
+                      "borderTopStyle": "solid",
+                      "borderTopColor": "#E0E0E0",
+                      "borderLeftWidth": "1px",
+                      "borderLeftStyle": "solid",
+                      "borderLeftColor": "#E0E0E0",
+                      "borderRightWidth": "1px",
+                      "borderRightStyle": "solid",
+                      "borderRightColor": "#E0E0E0",
+                      "borderBottomWidth": "1px",
+                      "borderBottomStyle": "solid",
+                      "borderBottomColor": "#E0E0E0"
+                    },
+                    "tableBodyBorder": {
+                      "borderTopWidth": "1px",
+                      "borderTopStyle": "solid",
+                      "borderTopColor": "#E0E0E0",
+                      "borderLeftWidth": "1px",
+                      "borderLeftStyle": "solid",
+                      "borderLeftColor": "#E0E0E0",
+                      "borderRightWidth": "1px",
+                      "borderRightStyle": "solid",
+                      "borderRightColor": "#E0E0E0",
+                      "borderBottomWidth": "1px",
+                      "borderBottomStyle": "solid",
+                      "borderBottomColor": "#E0E0E0"
+                    }
+                  }
+                },
+                {
+                  "type": "custom",
+                  "slug": "PageBreak",
+                  "values": {
+                    "containerPadding": "10px",
+                    "_meta": {
+                      "htmlID": "u_content_custom_PageBreak_9",
+                      "htmlClassNames": "u_content_custom_PageBreak"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "hideGeneral": ""
+                  }
+                },
+                {
+                  "type": "heading",
+                  "values": {
+                    "containerPadding": "10px",
+                    "headingType": "h1",
+                    "fontFamily": {
+                      "label": "Arial",
+                      "value": "arial,helvetica,sans-serif"
+                    },
+                    "fontSize": "22px",
+                    "textAlign": "left",
+                    "lineHeight": "140%",
+                    "linkStyle": {
+                      "inherit": true,
+                      "linkColor": "#0000ee",
+                      "linkHoverColor": "#0000ee",
+                      "linkUnderline": true,
+                      "linkHoverUnderline": true
+                    },
+                    "hideDesktop": false,
+                    "_meta": {
+                      "htmlID": "u_content_heading_13",
+                      "htmlClassNames": "u_content_heading"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "text": "Recurring Charges"
+                  }
+                },
+                {
+                  "type": "custom",
+                  "slug": "generic_table",
+                  "values": {
+                    "containerPadding": "10px",
+                    "_meta": {
+                      "htmlID": "u_content_custom_generic_table_8",
+                      "htmlClassNames": "u_content_custom_generic_table"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "tableMeta": {
+                      "options": [],
+                      "objects": [],
+                      "objectTypes": [],
+                      "selectedObject": {},
+                      "secondSelectedObject": {},
+                      "selectedColumns": [],
+                      "advFieldName": false,
+                      "filterBy": [],
+                      "sortBy": [],
+                      "groupBy": []
+                    },
+                    "headerFontFamily": {
+                      "label": "Arial",
+                      "value": "arial,helvetica,sans-serif"
+                    },
+                    "headerFontSize": "14",
+                    "headerBIU": {
+                      "textLabel": "Formatting",
+                      "textBold": false,
+                      "textItalic": false,
+                      "textUnderline": false
+                    },
+                    "headerAlign": "center",
+                    "headerTextColor": "#464C51",
+                    "headerBgColor": "#F6F7F8",
+                    "bodyFontFamily": {
+                      "label": "Arial",
+                      "value": "arial,helvetica,sans-serif"
+                    },
+                    "bodyFontSize": "14",
+                    "bodyBIU": {
+                      "textLabel": "Formatting",
+                      "textBold": false,
+                      "textItalic": false,
+                      "textUnderline": false
+                    },
+                    "bodyAlign": "left",
+                    "bodyTextColor": "#000000",
+                    "bodyBgColor": "#FFFFFF",
+                    "tableHeaderPadding": {
+                      "label": "Table Header",
+                      "paddingTop": 12,
+                      "paddingBottom": 12,
+                      "paddingRight": 12,
+                      "paddingLeft": 12
+                    },
+                    "tableBodyPadding": {
+                      "label": "Table Body",
+                      "paddingTop": 12,
+                      "paddingBottom": 12,
+                      "paddingRight": 12,
+                      "paddingLeft": 12
+                    },
+                    "tableHeaderBorder": {
+                      "borderTopWidth": "1px",
+                      "borderTopStyle": "solid",
+                      "borderTopColor": "#E0E0E0",
+                      "borderLeftWidth": "1px",
+                      "borderLeftStyle": "solid",
+                      "borderLeftColor": "#E0E0E0",
+                      "borderRightWidth": "1px",
+                      "borderRightStyle": "solid",
+                      "borderRightColor": "#E0E0E0",
+                      "borderBottomWidth": "1px",
+                      "borderBottomStyle": "solid",
+                      "borderBottomColor": "#E0E0E0"
+                    },
+                    "tableBodyBorder": {
+                      "borderTopWidth": "1px",
+                      "borderTopStyle": "solid",
+                      "borderTopColor": "#E0E0E0",
+                      "borderLeftWidth": "1px",
+                      "borderLeftStyle": "solid",
+                      "borderLeftColor": "#E0E0E0",
+                      "borderRightWidth": "1px",
+                      "borderRightStyle": "solid",
+                      "borderRightColor": "#E0E0E0",
+                      "borderBottomWidth": "1px",
+                      "borderBottomStyle": "solid",
+                      "borderBottomColor": "#E0E0E0"
+                    }
+                  }
+                },
+                {
+                  "type": "custom",
+                  "slug": "PageBreak",
+                  "values": {
+                    "containerPadding": "10px",
+                    "_meta": {
+                      "htmlID": "u_content_custom_PageBreak_10",
+                      "htmlClassNames": "u_content_custom_PageBreak"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "hideGeneral": ""
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "borderRadius": "0px",
+                "_meta": {
+                  "htmlID": "u_column_43",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "",
+            "columnsBackgroundColor": "",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "0px",
+            "hideDesktop": false,
+            "_meta": {
+              "htmlID": "u_row_32",
+              "htmlClassNames": "u_row"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
+          }
+        },
+        {
+          "cells": [
+            1
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "heading",
+                  "values": {
+                    "containerPadding": "10px",
+                    "headingType": "h1",
+                    "fontFamily": {
+                      "label": "Arial",
+                      "value": "arial,helvetica,sans-serif"
+                    },
+                    "fontSize": "22px",
+                    "textAlign": "left",
+                    "lineHeight": "140%",
+                    "linkStyle": {
+                      "inherit": true,
+                      "linkColor": "#0000ee",
+                      "linkHoverColor": "#0000ee",
+                      "linkUnderline": true,
+                      "linkHoverUnderline": true
+                    },
+                    "hideDesktop": false,
+                    "_meta": {
+                      "htmlID": "u_content_heading_14",
+                      "htmlClassNames": "u_content_heading"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "text": "Usage Charges"
+                  }
+                },
+                {
+                  "type": "custom",
+                  "slug": "generic_table",
+                  "values": {
+                    "containerPadding": "10px",
+                    "_meta": {
+                      "htmlID": "u_content_custom_generic_table_9",
+                      "htmlClassNames": "u_content_custom_generic_table"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "tableMeta": {
+                      "options": [],
+                      "objects": [],
+                      "objectTypes": [],
+                      "selectedObject": {},
+                      "secondSelectedObject": {},
+                      "selectedColumns": [],
+                      "advFieldName": false,
+                      "filterBy": [],
+                      "sortBy": [],
+                      "groupBy": []
+                    },
+                    "headerFontFamily": {
+                      "label": "Arial",
+                      "value": "arial,helvetica,sans-serif"
+                    },
+                    "headerFontSize": "14",
+                    "headerBIU": {
+                      "textLabel": "Formatting",
+                      "textBold": false,
+                      "textItalic": false,
+                      "textUnderline": false
+                    },
+                    "headerAlign": "center",
+                    "headerTextColor": "#464C51",
+                    "headerBgColor": "#F6F7F8",
+                    "bodyFontFamily": {
+                      "label": "Arial",
+                      "value": "arial,helvetica,sans-serif"
+                    },
+                    "bodyFontSize": "14",
+                    "bodyBIU": {
+                      "textLabel": "Formatting",
+                      "textBold": false,
+                      "textItalic": false,
+                      "textUnderline": false
+                    },
+                    "bodyAlign": "left",
+                    "bodyTextColor": "#000000",
+                    "bodyBgColor": "#FFFFFF",
+                    "tableHeaderPadding": {
+                      "label": "Table Header",
+                      "paddingTop": 12,
+                      "paddingBottom": 12,
+                      "paddingRight": 12,
+                      "paddingLeft": 12
+                    },
+                    "tableBodyPadding": {
+                      "label": "Table Body",
+                      "paddingTop": 12,
+                      "paddingBottom": 12,
+                      "paddingRight": 12,
+                      "paddingLeft": 12
+                    },
+                    "tableHeaderBorder": {
+                      "borderTopWidth": "1px",
+                      "borderTopStyle": "solid",
+                      "borderTopColor": "#E0E0E0",
+                      "borderLeftWidth": "1px",
+                      "borderLeftStyle": "solid",
+                      "borderLeftColor": "#E0E0E0",
+                      "borderRightWidth": "1px",
+                      "borderRightStyle": "solid",
+                      "borderRightColor": "#E0E0E0",
+                      "borderBottomWidth": "1px",
+                      "borderBottomStyle": "solid",
+                      "borderBottomColor": "#E0E0E0"
+                    },
+                    "tableBodyBorder": {
+                      "borderTopWidth": "1px",
+                      "borderTopStyle": "solid",
+                      "borderTopColor": "#E0E0E0",
+                      "borderLeftWidth": "1px",
+                      "borderLeftStyle": "solid",
+                      "borderLeftColor": "#E0E0E0",
+                      "borderRightWidth": "1px",
+                      "borderRightStyle": "solid",
+                      "borderRightColor": "#E0E0E0",
+                      "borderBottomWidth": "1px",
+                      "borderBottomStyle": "solid",
+                      "borderBottomColor": "#E0E0E0"
+                    }
+                  }
+                },
+                {
+                  "type": "custom",
+                  "slug": "PageBreak",
+                  "values": {
+                    "containerPadding": "10px",
+                    "_meta": {
+                      "htmlID": "u_content_custom_PageBreak_5",
+                      "htmlClassNames": "u_content_custom_PageBreak"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "hideGeneral": ""
+                  }
+                },
+                {
+                  "type": "heading",
+                  "values": {
+                    "containerPadding": "10px",
+                    "headingType": "h1",
+                    "fontFamily": {
+                      "label": "Arial",
+                      "value": "arial,helvetica,sans-serif"
+                    },
+                    "fontSize": "22px",
+                    "textAlign": "left",
+                    "lineHeight": "140%",
+                    "linkStyle": {
+                      "inherit": true,
+                      "linkColor": "#0000ee",
+                      "linkHoverColor": "#0000ee",
+                      "linkUnderline": true,
+                      "linkHoverUnderline": true
+                    },
+                    "hideDesktop": false,
+                    "_meta": {
+                      "htmlID": "u_content_heading_15",
+                      "htmlClassNames": "u_content_heading"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "text": "Pro-Rated Charges and Credits"
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "borderRadius": "0px",
+                "_meta": {
+                  "htmlID": "u_column_33",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "",
+            "columnsBackgroundColor": "",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "0px",
+            "hideDesktop": false,
+            "_meta": {
+              "htmlID": "u_row_23",
+              "htmlClassNames": "u_row"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
+          }
+        },
+        {
+          "cells": [
+            1
+          ],
+          "columns": [
+            {
+              "contents": [
+                {
+                  "type": "custom",
+                  "slug": "generic_table",
+                  "values": {
+                    "containerPadding": "10px",
+                    "_meta": {
+                      "htmlID": "u_content_custom_generic_table_6",
+                      "htmlClassNames": "u_content_custom_generic_table"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "tableMeta": {
+                      "options": [],
+                      "objects": [],
+                      "objectTypes": [],
+                      "selectedObject": {
+                        "label": "InvoiceItems: list of InvoiceItem",
+                        "type": "invoiceitem",
+                        "attrName": "invoiceitems",
+                        "isList": true
+                      },
+                      "secondSelectedObject": null,
+                      "selectedColumns": [
+                        {
+                          "fieldName": "RatePlanCharge.RatePlan.Amendment.QuoteNumber__c",
+                          "label": "RatePlanCharge.RatePlan.Amendment.QuoteNumber__c",
+                          "decorator": "",
+                          "advFieldName": false,
+                          "width": "auto",
+                          "alignment": ""
+                        },
+                        {
+                          "fieldName": "RatePlanCharge.ProductRatePlanCharge.Name",
+                          "label": "RatePlanCharge.ProductRatePlanCharge.Name",
+                          "decorator": "",
+                          "advFieldName": false,
+                          "width": "auto",
+                          "alignment": ""
+                        },
+                        {
+                          "fieldName": "RatePlanCharge.ProductRatePlanCharge.ChargeType",
+                          "label": "RatePlanCharge.ProductRatePlanCharge.ChargeType",
+                          "decorator": "",
+                          "advFieldName": false,
+                          "width": "auto",
+                          "alignment": ""
+                        },
+                        {
+                          "fieldName": "ChargeName",
+                          "label": "ChargeName",
+                          "decorator": "",
+                          "advFieldName": false,
+                          "width": "auto",
+                          "alignment": ""
+                        },
+                        {
+                          "fieldName": "Quantity",
+                          "label": "Quantity",
+                          "decorator": "",
+                          "advFieldName": false,
+                          "width": "auto",
+                          "alignment": ""
+                        },
+                        {
+                          "fieldName": "UnitPrice",
+                          "label": "UnitPrice",
+                          "decorator": "Round(2)",
+                          "advFieldName": false,
+                          "width": "auto",
+                          "alignment": ""
+                        },
+                        {
+                          "fieldName": "ChargeAmount",
+                          "label": "ChargeAmount",
+                          "decorator": "Round(2)",
+                          "advFieldName": false,
+                          "width": "auto",
+                          "alignment": ""
+                        },
+                        {
+                          "fieldName": "ChargeDate",
+                          "label": "ChargeDate",
+                          "decorator": "",
+                          "advFieldName": false,
+                          "width": "auto",
+                          "alignment": ""
+                        },
+                        {
+                          "fieldName": "RatePlanCharge.AmendedByOrderOn",
+                          "label": "RatePlanCharge.AmendedByOrderOn",
+                          "decorator": "",
+                          "advFieldName": false,
+                          "width": "auto",
+                          "alignment": ""
+                        },
+                        {
+                          "fieldName": "ServiceStartDate",
+                          "label": "ServiceStartDate",
+                          "decorator": "",
+                          "advFieldName": false,
+                          "width": "auto",
+                          "alignment": ""
+                        },
+                        {
+                          "fieldName": "ServiceEndDate",
+                          "label": "ServiceEndDate",
+                          "decorator": "",
+                          "advFieldName": false,
+                          "width": "auto",
+                          "alignment": ""
+                        }
+                      ],
+                      "advFieldName": false,
+                      "filterBy": [
+                        {
+                          "key": "ChargeAmount",
+                          "operator": "NE",
+                          "value": "0"
+                        },
+                        {
+                          "key": "AmendmentId",
+                          "operator": "NOT_NULL",
+                          "value": ""
+                        },
+                        {
+                          "key": "RatePlanCharge.ProductRatePlanCharge.ChargeType",
+                          "operator": "NE",
+                          "value": "Usage"
+                        },
+                        {
+                          "key": "RatePlanCharge.AmendedByOrderOn",
+                          "operator": "IS_NULL",
+                          "value": ""
+                        }
+                      ],
+                      "sortBy": [
+                        {
+                          "key": "ServiceEndDate",
+                          "direction": "ASC"
+                        }
+                      ],
+                      "groupBy": [],
+                      "isFirstSelectObject": true,
+                      "showObjectSelectModal": false,
+                      "showAddColumnModal": false,
+                      "isEditModal": false,
+                      "isAggregateChecked": false,
+                      "isSortChecked": false,
+                      "rowIndex": null,
+                      "addModalTitle": "Add Filter By",
+                      "forceUpdate": false,
+                      "showSortByModal": false,
+                      "showFilterByModal": false,
+                      "showGroupByModal": false,
+                      "rowField": "selectedColumns"
+                    },
+                    "headerFontFamily": {
+                      "label": "Arial",
+                      "value": "arial,helvetica,sans-serif"
+                    },
+                    "headerFontSize": "14",
+                    "headerBIU": {
+                      "textLabel": "Formatting",
+                      "textBold": false,
+                      "textItalic": false,
+                      "textUnderline": false
+                    },
+                    "headerAlign": "center",
+                    "headerTextColor": "#464C51",
+                    "headerBgColor": "#F6F7F8",
+                    "bodyFontFamily": {
+                      "label": "Arial",
+                      "value": "arial,helvetica,sans-serif"
+                    },
+                    "bodyFontSize": "14",
+                    "bodyBIU": {
+                      "textLabel": "Formatting",
+                      "textBold": false,
+                      "textItalic": false,
+                      "textUnderline": false
+                    },
+                    "bodyAlign": "left",
+                    "bodyTextColor": "#000000",
+                    "bodyBgColor": "#FFFFFF",
+                    "tableHeaderPadding": {
+                      "label": "Table Header",
+                      "paddingTop": 12,
+                      "paddingBottom": 12,
+                      "paddingRight": 12,
+                      "paddingLeft": 12
+                    },
+                    "tableBodyPadding": {
+                      "label": "Table Body",
+                      "paddingTop": 12,
+                      "paddingBottom": 12,
+                      "paddingRight": 12,
+                      "paddingLeft": 12
+                    },
+                    "tableHeaderBorder": {
+                      "borderTopWidth": "1px",
+                      "borderTopStyle": "solid",
+                      "borderTopColor": "#E0E0E0",
+                      "borderLeftWidth": "1px",
+                      "borderLeftStyle": "solid",
+                      "borderLeftColor": "#E0E0E0",
+                      "borderRightWidth": "1px",
+                      "borderRightStyle": "solid",
+                      "borderRightColor": "#E0E0E0",
+                      "borderBottomWidth": "1px",
+                      "borderBottomStyle": "solid",
+                      "borderBottomColor": "#E0E0E0"
+                    },
+                    "tableBodyBorder": {
+                      "borderTopWidth": "1px",
+                      "borderTopStyle": "solid",
+                      "borderTopColor": "#E0E0E0",
+                      "borderLeftWidth": "1px",
+                      "borderLeftStyle": "solid",
+                      "borderLeftColor": "#E0E0E0",
+                      "borderRightWidth": "1px",
+                      "borderRightStyle": "solid",
+                      "borderRightColor": "#E0E0E0",
+                      "borderBottomWidth": "1px",
+                      "borderBottomStyle": "solid",
+                      "borderBottomColor": "#E0E0E0"
+                    }
+                  }
+                },
+                {
+                  "type": "custom",
+                  "slug": "PageBreak",
+                  "values": {
+                    "containerPadding": "10px",
+                    "_meta": {
+                      "htmlID": "u_content_custom_PageBreak_4",
+                      "htmlClassNames": "u_content_custom_PageBreak"
+                    },
+                    "selectable": true,
+                    "draggable": true,
+                    "duplicatable": true,
+                    "deletable": true,
+                    "hideable": true,
+                    "hideGeneral": ""
+                  }
+                }
+              ],
+              "values": {
+                "backgroundColor": "",
+                "padding": "0px",
+                "border": {},
+                "borderRadius": "0px",
+                "_meta": {
+                  "htmlID": "u_column_35",
+                  "htmlClassNames": "u_column"
+                }
+              }
+            }
+          ],
+          "values": {
+            "displayCondition": null,
+            "columns": false,
+            "backgroundColor": "",
+            "columnsBackgroundColor": "",
+            "backgroundImage": {
+              "url": "",
+              "fullWidth": true,
+              "repeat": false,
+              "center": true,
+              "cover": false
+            },
+            "padding": "0px",
+            "hideDesktop": false,
+            "_meta": {
+              "htmlID": "u_row_25",
+              "htmlClassNames": "u_row"
+            },
+            "selectable": true,
+            "draggable": true,
+            "duplicatable": true,
+            "deletable": true,
+            "hideable": true
           }
         }
-      },
-      "schemaVersion": 6
-    }
+      ],
+      "values": {
+        "textColor": "#000000",
+        "backgroundColor": "#95a5a6",
+        "backgroundImage": {
+          "url": "",
+          "fullWidth": true,
+          "repeat": false,
+          "center": true,
+          "cover": false
+        },
+        "contentWidth": "816px",
+        "contentAlign": "center",
+        "fontFamily": {
+          "label": "Montserrat",
+          "value": "'Montserrat',sans-serif",
+          "url": "https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+        },
+        "linkStyle": {
+          "body": true,
+          "linkColor": "#0000ee",
+          "linkHoverColor": "#0000ee",
+          "linkUnderline": true,
+          "linkHoverUnderline": true
+        },
+        "_meta": {
+          "htmlID": "u_body",
+          "htmlClassNames": "u_body"
+        }
+      }
+    },
+    "schemaVersion": 6
   }
+}
