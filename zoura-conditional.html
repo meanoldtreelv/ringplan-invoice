@@ -1,0 +1,54 @@
+{{#Invoice}}
+<!-- Logical Evaluation for sections -->
+	<!--Proration-->
+{{#InvoiceItems|FilterByValue(ChargeAmount,NE,0)|SortBy(RatePlanCharge.AmendedByOrderOn,DESC)|First(1)}}
+{{Cmd_Assign(HasProrated,RatePlanCharge.AmendedByOrderOn,True)}}
+{{/InvoiceItems|FilterByValue(ChargeAmount,NE,0)|SortBy(RatePlanCharge.AmendedByOrderOn,DESC)|First(1)}}
+	<!--Usage-->
+{{#InvoiceItems|FilterByValue(ChargeAmount,NE,0)|FilterByValue(RatePlanCharge.ProductRatePlanCharge.ChargeType,EQ,Usage)|FilterByValue(RatePlanCharge.AmendedByOrderOn,IS_NULL)|First(1)}}
+{{Cmd_Assign(HasUsage,RatePlanCharge.ProductRatePlanCharge.ChargeType,True)}}
+{{/InvoiceItems|FilterByValue(ChargeAmount,NE,0)|FilterByValue(RatePlanCharge.ProductRatePlanCharge.ChargeType,EQ,Usage)|FilterByValue(RatePlanCharge.AmendedByOrderOn,IS_NULL)|First(1)}}
+	<!--One-Time-->
+{{#InvoiceItems|FilterByValue(ChargeAmount,NE,0)|FilterByValue(RatePlanCharge.ProductRatePlanCharge.ChargeType,EQ,One-Time)|FilterByValue(RatePlanCharge.AmendedByOrderOn,IS_NULL)|First(1)}}
+{{Cmd_Assign(HasOneTime,RatePlanCharge.ProductRatePlanCharge.ChargeType,True)}}
+{{/InvoiceItems|FilterByValue(ChargeAmount,NE,0)|FilterByValue(RatePlanCharge.ProductRatePlanCharge.ChargeType,EQ,One-Time)|FilterByValue(RatePlanCharge.AmendedByOrderOn,IS_NULL)|First(1)}}
+	<!--Recurring-->
+{{#InvoiceItems|FilterByValue(ChargeAmount,NE,0)|FilterByValue(RatePlanCharge.ProductRatePlanCharge.ChargeType,EQ,Recurring)|FilterByValue(RatePlanCharge.AmendedByOrderOn,IS_NULL)|First(1)}}
+{{Cmd_Assign(HasRecurring,RatePlanCharge.ProductRatePlanCharge.ChargeType,True)}}
+{{/InvoiceItems|FilterByValue(ChargeAmount,NE,0)|FilterByValue(RatePlanCharge.ProductRatePlanCharge.ChargeType,EQ,Recurring)|FilterByValue(RatePlanCharge.AmendedByOrderOn,IS_NULL)|First(1)}}
+
+
+
+<!--Value Checks-
+False = Present
+Recurring: {{HasRecurring|IsBlank}}
+Usage: {{HasUsage|IsBlank}}
+One-Time: {{HasOneTime|IsBlank}}
+Prorated: {{HasProrated|IsBlank}}
+must use string eval-->
+
+<h2>Service Address: {Service Address} </h2>
+
+<table>
+<!--Recurring Charges-->
+{{#Wp_Eval}}
+"{{HasOneTime|IsBlank}}" == "true" ? "" : `<tr><td>One Time Charges:</td><td>{Charge Amount}</td></tr>`
+{{/Wp_Eval}}
+{{#Wp_Eval}}
+"{{HasProrated|IsBlank}}" == "true" ? "" : `<tr><td>Prorated Charges:</td><td>{Charge Amount}</td></tr>`
+{{/Wp_Eval}}
+{{#Wp_Eval}}
+"{{HasRecurring|IsBlank}}" == "true" ? "" : `<tr><td>Recurring Charges:</td><td>{Charge Amount}</td></tr>`
+{{/Wp_Eval}}
+{{#Wp_Eval}}
+"{{HasUsage|IsBlank}}" == "true" ? "" : `<tr><td>Usage Charges:</td><td>{Charge Amount}</td></tr>`
+{{/Wp_Eval}}
+<tr><td>Charges Subtotal</td><td>{Subtotal Amount}</td></tr>
+<tr><td>Taxes, Surcharges & Fees</td><td>{Tax Amount}</td></tr>
+<tr><td>Adjustments & Credits</td><td>{Adjustment Amount}</td></tr>
+<tr><td>Invoice Amount</td><td>{Invoice Amount}</td></tr>
+<tr><td>Payments</td><td>{Payments}</td></tr>
+<tr><td>Total Amount Due</td><td>{Total Due}</td></tr>
+</table>
+
+{{/Invoice}}
